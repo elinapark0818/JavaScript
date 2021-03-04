@@ -60,12 +60,12 @@ switch (device) {
         console.log('모르겠다.')
 }
 
-function add(ab, bc) {
-    return ab + bc;
-}
+// function add(ab, bc) {
+//     return ab + bc;
 
-const sum = add(35,15)
-console.log(sum);
+
+// const sum = add(35,15)
+// console.log(sum);
 
 function hello(name) {
     console.log('Hello,' + name + '!');
@@ -92,6 +92,20 @@ function getGrade(score) {
         return 'F';
     }
 }
-
 const grade = getGrade(49);
 console.log(grade)
+
+const Add = (ac, be) => {
+    return ac + be;
+}
+
+const sum = Add(5, 7);
+console.log(sum);
+
+
+
+const hi = (name) => {
+    console.log(`Hi, ${name}~!`);
+
+    hi('Elina');
+}
