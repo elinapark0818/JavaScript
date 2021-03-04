@@ -185,3 +185,14 @@ console.log(numbers.sum);
 //Getter함수는 특정 값을 조회하려고 할때(호출X),
 // 특정코드를 실행시키고 연산된 값을 사용하는 것
 
+const crazydog = {
+    _name: '주보리',
+    set name(value) {
+        console.log('이름이 바뀝니다..' + value);
+        this._name = value;
+    }
+};
+
+console.log(crazydog._name);
+crazydog.name = '김동이';
+console.log(crazydog._name);
