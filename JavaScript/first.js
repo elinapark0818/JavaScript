@@ -78,3 +78,20 @@ function bye(name) {
 // bye('ElinaPark');
 const result = bye('ElinaPark')
 console.log(result);
+
+function getGrade(score) {
+    if (score === 100) {
+        return 'A';
+    } else if (score >= 90) {
+        return 'B';
+    } else if (score >= 80) {
+        return 'C';
+    } else if (score >= 70) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+const grade = getGrade(49);
+console.log(grade)
