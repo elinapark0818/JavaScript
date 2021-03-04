@@ -98,14 +98,52 @@ console.log(grade)
 const Add = (ac, be) => {
     return ac + be;
 }
-
 const sum = Add(5, 7);
 console.log(sum);
 
 
-
 const hi = (name) => {
     console.log(`Hi, ${name}~!`);
-
-    hi('Elina');
 }
+hi('Elina');
+
+
+
+// const dogName = '초롱이';
+// const dogAge = 14;
+//
+// console.log(dogName);
+// console.log(dogAge);
+
+const dog = {
+    name: '초롱이',
+    age: 14,
+    love: 3000,
+    'key with space': 'blablabla',
+}
+console.log(dog);
+console.log(dog.name);
+console.log(dog.age);
+console.log(dog.love);
+
+const ironMan = {
+    name: '토니 스타크',
+    actor: '로버트 다우니 주니어',
+    alias: '아이언맨'
+}
+const captainAmerica = {
+    name: '스티븐 로저스',
+    actor: '크리스 에반스',
+    alias: '캡틴 아메리카'
+}
+console.log(ironMan);
+console.log(captainAmerica);
+
+function print(hero) {
+    const text = `${hero.alias}(${hero.name}) 역할을 맡은 배우는 ${hero.actor} 입니다.`;
+    console.log(text);
+}
+print(ironMan);
+print(captainAmerica);
+
+//비구조화할당 객체구조분해
