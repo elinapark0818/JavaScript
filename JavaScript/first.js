@@ -245,3 +245,9 @@ objects.push({
 });
 console.log(objects);
 console.log(objects.length);
+
+const names = ['망고', '보리', '초롱'];
+
+for (let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
