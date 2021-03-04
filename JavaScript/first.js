@@ -235,3 +235,13 @@ console.log(numbers.sum);
 //Setter 함수는 특정 값을 설정할 때마다
 //Getter 함수는 특정 값을 조회할 때마다
 // value를 파라미터로 가져와서 추가적으로 코드를 실행하고 싶을 때 쓴다
+
+const objects = [
+    {name: '초롱이'},
+    {name: '망고'}
+];
+objects.push({
+    name: '보리'
+});
+console.log(objects);
+console.log(objects.length);
