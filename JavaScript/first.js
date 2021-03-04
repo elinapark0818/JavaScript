@@ -59,3 +59,15 @@ switch (device) {
     default:
         console.log('모르겠다.')
 }
+
+function add(ab, bc) {
+    return ab + bc;
+}
+
+const sum = add(35,15)
+console.log(sum);
+
+function hello(name) {
+    console.log('Hello,' + name + '!');
+}
+hello('Elina');
