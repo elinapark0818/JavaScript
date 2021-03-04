@@ -169,3 +169,19 @@ const cat = {
 cat.say = cutydog.say;
 cutydog.say();
 cat.say();
+
+const numbers = {
+    m: 1,
+    n: 2,
+    get sum() {
+        console.log('sum 함수가 실행됩니다!');
+        return this.m + this.n;
+    }
+}
+console.log(numbers.sum);
+numbers.n = 5;
+console.log(numbers.sum);
+
+//Getter함수는 특정 값을 조회하려고 할때(호출X),
+// 특정코드를 실행시키고 연산된 값을 사용하는 것
+
