@@ -139,8 +139,7 @@ const captainAmerica = {
 console.log(ironMan);
 console.log(captainAmerica);
 
-function print(hero) {
-    const { alias, name, actor} = hero;
+function print({ alias, name, actor}) {
     const text = `${alias}(${name}) 역할을 맡은 배우는 ${actor} 입니다.`;
     console.log(text);
 }
