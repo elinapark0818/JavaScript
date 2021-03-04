@@ -281,3 +281,9 @@ console.log(Object.values(doggy));
 for (let key in doggy) {
     console.log(`${key}: ${doggy[key]}`);
 }
+
+for (let u = 0; u < 10; u++) {
+    if (u === 2) continue;
+    console.log(u);
+    if (u === 5) break;
+}
