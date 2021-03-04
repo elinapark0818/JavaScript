@@ -187,6 +187,10 @@ console.log(numbers.sum);
 
 const crazydog = {
     _name: '주보리',
+    get name() {
+        console.log('_name을 조회합니다..');
+        return this._name;
+    },
     set name(value) {
         console.log('이름이 바뀝니다..' + value);
         this._name = value;
