@@ -73,6 +73,8 @@ function hello(name) {
 hello('Elina');
 
 function bye(name) {
-    console.log(`Bye ${name}`);
+    return `Bye ${name}~~`;
 }
-bye('ElinaPark');
+// bye('ElinaPark');
+const result = bye('ElinaPark')
+console.log(result);
