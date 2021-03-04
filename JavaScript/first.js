@@ -130,7 +130,10 @@ const ironMan = {
     name: '토니 스타크',
     actor: '로버트 다우니 주니어',
     alias: '아이언맨'
-}
+};
+const { name } = ironMan;
+console.log(name);
+
 const captainAmerica = {
     name: '스티븐 로저스',
     actor: '크리스 에반스',
