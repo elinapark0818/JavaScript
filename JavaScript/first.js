@@ -71,3 +71,8 @@ function hello(name) {
     console.log('Hello,' + name + '!');
 }
 hello('Elina');
+
+function bye(name) {
+    console.log(`Bye ${name}`);
+}
+bye('ElinaPark');
