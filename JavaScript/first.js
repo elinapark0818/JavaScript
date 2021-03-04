@@ -287,3 +287,14 @@ for (let u = 0; u < 10; u++) {
     console.log(u);
     if (u === 5) break;
 }
+
+function sumOf(nbs) {
+    let sum = 0;
+    for (let v = 0; v <nbs.length; v++) {
+        sum += nbs[v];
+    }
+    return sum;
+}
+
+const result = sumOf([1,2,3,4,5]);
+console.log(result);
