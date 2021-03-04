@@ -262,3 +262,18 @@ while (!isFun) {
         isFun = true;
     }
 }
+
+const nbs = [10, 20, 30, 40, 50];
+
+for (let nb of nbs) {
+    console.log(nb);
+}
+
+const doggy = {
+    name: '도기',
+    sound: '왈왈!',
+    age: 2
+};
+
+console.log(Object.keys(doggy));
+console.log(Object.values(doggy));
