@@ -25,3 +25,20 @@ if (aa + 1 === 2) {
     console.log('if문 안의 a 값은?' + aa);
 }
 console.log('if문 안의 a 값은?' + aa);
+
+
+const aaa = 10;
+if (aaa > 15) {
+    console.log('a가 15보다 크다');
+} else {
+    console.log('a가 15보다 작다');
+}
+
+const bb = 10;
+if (bb === 5) {
+    console.log('bb는 5다.');
+} else if (bb === 10) {
+    console.log('bb는 10이다.');
+} else {
+    console.log('bb는 5도 10도 아니다.');
+}
