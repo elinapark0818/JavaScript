@@ -274,6 +274,10 @@ const doggy = {
     sound: '왈왈!',
     age: 2
 };
-
+console.log(Object.entries(doggy));
 console.log(Object.keys(doggy));
 console.log(Object.values(doggy));
+
+for (let key in doggy) {
+    console.log(`${key}: ${doggy[key]}`);
+}
