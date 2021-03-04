@@ -235,66 +235,75 @@ console.log(numbers.sum);
 //Setter 함수는 특정 값을 설정할 때마다
 //Getter 함수는 특정 값을 조회할 때마다
 // value를 파라미터로 가져와서 추가적으로 코드를 실행하고 싶을 때 쓴다
+//
+// const objects = [
+//     {name: '초롱이'},
+//     {name: '망고'}
+// ];
+// objects.push({
+//     name: '보리'
+// });
+// console.log(objects);
+// console.log(objects.length);
+//
+// const names = ['망고', '보리', '초롱'];
+//
+// for (let i = 0; i < names.length; i++) {
+//     console.log(names[i]);
+// }
+//
+// let ii = 0;
+// let isFun = false;
+//
+// while (!isFun) {
+//     console.log(ii);
+//     ii++;
+//     if (ii === 30) {
+//         isFun = true;
+//     }
+// }
+//
+// const nbs = [10, 20, 30, 40, 50];
+//
+// for (let nb of nbs) {
+//     console.log(nb);
+// }
+//
+// const doggy = {
+//     name: '도기',
+//     sound: '왈왈!',
+//     age: 2
+// };
+// console.log(Object.entries(doggy));
+// console.log(Object.keys(doggy));
+// console.log(Object.values(doggy));
+//
+// for (let key in doggy) {
+//     console.log(`${key}: ${doggy[key]}`);
+// }
+//
+// for (let u = 0; u < 10; u++) {
+//     if (u === 2) continue;
+//     console.log(u);
+//     if (u === 5) break;
+// }
+//
+// function sumOf(nbs) {
+//     let sum = 0;
+//     for (let v = 0; v <nbs.length; v++) {
+//         sum += nbs[v];
+//     }
+//     return sum;
+// }
+//
+// const result = sumOf([1,2,3,4,5]);
+// console.log(result);
 
-const objects = [
-    {name: '초롱이'},
-    {name: '망고'}
-];
-objects.push({
-    name: '보리'
-});
-console.log(objects);
-console.log(objects.length);
+function biggerThanThree(nbs) {
 
-const names = ['망고', '보리', '초롱'];
-
-for (let i = 0; i < names.length; i++) {
-    console.log(names[i]);
 }
 
-let ii = 0;
-let isFun = false;
+const nbs = [1,2,3,4,5,6,7];
+console.log(biggerThanThree(nbs));
 
-while (!isFun) {
-    console.log(ii);
-    ii++;
-    if (ii === 30) {
-        isFun = true;
-    }
-}
-
-const nbs = [10, 20, 30, 40, 50];
-
-for (let nb of nbs) {
-    console.log(nb);
-}
-
-const doggy = {
-    name: '도기',
-    sound: '왈왈!',
-    age: 2
-};
-console.log(Object.entries(doggy));
-console.log(Object.keys(doggy));
-console.log(Object.values(doggy));
-
-for (let key in doggy) {
-    console.log(`${key}: ${doggy[key]}`);
-}
-
-for (let u = 0; u < 10; u++) {
-    if (u === 2) continue;
-    console.log(u);
-    if (u === 5) break;
-}
-
-function sumOf(nbs) {
-    let sum = 0;
-    for (let v = 0; v <nbs.length; v++) {
-        sum += nbs[v];
-    }
-    return sum;
-}
-
-const result = sumOf([1,2,3,4,5]);
-console.log(result);
+export default biggerThanThree;
