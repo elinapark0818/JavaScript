@@ -150,3 +150,22 @@ print(ironMan);
 print(captainAmerica);
 
 //비구조화할당 객체구조분해
+
+const cutydog = {
+    name: '망고',
+    sound: '김망고 낑낑!',
+    say: function say() {
+        console.log(this.sound); //여기서 this는 cutydog를(자기가 속해있는 함수) 의미
+    }
+}
+cutydog.say();
+
+
+const cat = {
+    name: '야통이',
+    sound: '미얏홍~!'
+};
+
+cat.say = cutydog.say;
+cutydog.say();
+cat.say();
