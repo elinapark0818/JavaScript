@@ -251,3 +251,14 @@ const names = ['망고', '보리', '초롱'];
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
+
+let ii = 0;
+let isFun = false;
+
+while (isFun === false) {
+    console.log(ii);
+    ii++;
+    if (ii === 30) {
+        isFun = true;
+    }
+}
