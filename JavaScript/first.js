@@ -255,7 +255,7 @@ for (let i = 0; i < names.length; i++) {
 let ii = 0;
 let isFun = false;
 
-while (isFun === false) {
+while (!isFun) {
     console.log(ii);
     ii++;
     if (ii === 30) {
