@@ -391,5 +391,7 @@ const todos = [
     }
 ]
 
-const todo = todos.find(todo => todo.done === false)
-console.log(todo);
+//find는  첫번째로 찾은 값 자체를 반환한다
+
+const tasksNotDone = todos.filter(todo => todo.done === true);
+console.log(tasksNotDone)
