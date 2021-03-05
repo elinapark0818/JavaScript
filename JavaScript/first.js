@@ -325,3 +325,27 @@ herodogs.forEach(hero => {
 //
 // forEach 함수의 파라미터로는, 각 원소에 대하여 처리하고 싶은 코드를 함수로 넣어줍니다. 이 함수의 파라미터 hero는 각 원소를 가르키게 됩니다.
 // 이렇게 함수형태의 파라미터를 전달하는 것을 콜백함수 라고 부릅니다. 함수를 등록해주면, forEach 가 실행을 해주는 거죠.
+
+const array = [1,2,3,4,5,6,7,8];
+
+// const squared = [];
+// for (let a = 0; a < array.length; a++) {
+//     squared.push(array[a] * array[a]);
+// }
+// console.log(squared);
+
+
+// const sqaured = [];
+// array.forEach(n => {sqaured.push(n * n);
+// });
+// console.log(sqaured);
+
+// const square = n => n * n;
+// const squared = array.map(square);
+// console.log(squared);
+
+const squared = array.map(n => n * n);
+console.log(squared);
+
+// map함수의 파라미터로 변화를주는 함수(변화함수)를 전달해준다
+//내부의 모든 값에 대해 변화를 적용시켜 새로운 배열을 생성한다
