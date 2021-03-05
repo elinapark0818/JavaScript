@@ -393,5 +393,5 @@ const todos = [
 
 //find는  첫번째로 찾은 값 자체를 반환한다
 
-const tasksNotDone = todos.filter(todo => todo.done === true);
+const tasksNotDone = todos.filter(todo => !todo.done);
 console.log(tasksNotDone)
