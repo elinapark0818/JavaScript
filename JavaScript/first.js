@@ -391,5 +391,5 @@ const todos = [
     }
 ]
 
-const todo = todos.find(todo => todo.id === 3)
+const todo = todos.find(todo => todo.done === false)
 console.log(todo);
