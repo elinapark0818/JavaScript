@@ -349,3 +349,16 @@ console.log(squared);
 
 // map함수의 파라미터로 변화를주는 함수(변화함수)를 전달해준다
 //내부의 모든 값에 대해 변화를 적용시켜 새로운 배열을 생성한다
+
+const items = [
+    {
+        id:1,
+        text: 'hello'
+    },
+    {
+        id:2,
+        text: 'bye'
+    }
+];
+const texts = items.map(item => item.text);
+console.log(texts);
