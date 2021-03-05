@@ -319,6 +319,6 @@ const herodogs = [
     '김동이',
     '초롱이'
 ]
-herodogs.function (hero => {
+herodogs.forEach(hero => {
     console.log(hero);
 })
