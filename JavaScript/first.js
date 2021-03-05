@@ -312,3 +312,21 @@ function biggerThanThree(numbers) {
 const numbers = [1,2,3,4,5,6,7];
 console.log(biggerThanThree(numbers));
 // export default biggerThanThree; 문제를 복사해왔지만, 안되길래 뺌..
+
+const herodogs = [
+    '김망고',
+    '주보리',
+    '김동이',
+    '초롱이'
+]
+for (let g = 0; g < herodogs.length; g++) {
+    console.log(herodogs[g]);
+}
+
+function print(hero) {
+    console.log(hero);
+}
+
+herodogs.forEach(function (hero) {
+    console.log(hero);
+})
