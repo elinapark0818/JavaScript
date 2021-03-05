@@ -319,14 +319,6 @@ const herodogs = [
     '김동이',
     '초롱이'
 ]
-for (let g = 0; g < herodogs.length; g++) {
-    console.log(herodogs[g]);
-}
-
-function print(hero) {
-    console.log(hero);
-}
-
-herodogs.forEach(function (hero) {
+herodogs.function (hero => {
     console.log(hero);
 })
