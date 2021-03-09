@@ -615,6 +615,8 @@ class CC extends Am {
 
 const dd = new DD('뚜지', '우헤헿');
 const cc = new CC( '오구', '따란!');
+const ogu = new CC('아기오구', '>_<');
 
 dd.say();
 cc.say();
+ogu.say();
