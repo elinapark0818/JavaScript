@@ -656,3 +656,9 @@ let text = array_.length === 0
     : '배열이 비어있지 않습니다.';
 
 console.log(text);
+
+console.log(!undefined);
+console.log(!null);
+console.log(!0);
+console.log(!'');
+console.log(!NaN);
