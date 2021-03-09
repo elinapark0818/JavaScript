@@ -647,3 +647,12 @@ chicken.addBrand('BBQ');
 
 pizza.print()
 chicken.print();
+
+//
+
+const array_ = [4, 6];
+let text = array_.length === 0
+    ? '배열이 비어있습니다'
+    : '배열이 비어있지 않습니다.';
+
+console.log(text);
