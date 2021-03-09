@@ -620,3 +620,30 @@ const ogu = new CC('아기오구', '>_<');
 dd.say();
 cc.say();
 ogu.say();
+
+//
+
+class Food {
+    constructor(name) {
+        this.name = name;
+        this.brands = [];
+    }
+    addBrand(brand) {
+        this.brands.push(brand)
+    }
+    print() {
+        console.log(`${this.name} 판매하는 프랜차이즈 음식점들:`)
+        console.log(this.brands.join(', '));
+    }
+}
+
+const pizza = new Food('피자');
+pizza.addBrand('반올림 피자샵');
+pizza.addBrand('피자 알볼로');
+
+const chicken = new Food('치킨');
+chicken.addBrand('후라이드 참 잘하는 집');
+chicken.addBrand('BBQ');
+
+pizza.print()
+chicken.print();
