@@ -436,3 +436,11 @@ console.log(array1.join(', '));
 const all = [1, 2, 3, 4, 5];
 let sum = all.reduce((accumulator, current) => accumulator + current, 0);
 console.log(sum);
+
+const avg = all.reduce((accumulator, current, index, array) => {
+    if (index === array.length - 1) {
+        return (accumulator + current) / array.length;
+    }
+    return accumulator + current;
+}, 0);
+console.log(avg);
