@@ -539,3 +539,52 @@ console.log(count);
 // const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
 // console.log(count)
 // // 출력 : 5
+
+//---------------------------------------------------------------
+function Animal(type, name, sound) {  //대문자를 사용한다
+    this.type = type;
+    this.name = name;
+    this.sound = sound;
+}
+
+Animal.prototype.say = function () {
+    console.log(this.sound);
+}
+
+const dog = new Animal('개', '망고', '낑낑');  //new 사용한다
+const cat = new Animal('고양이', '야통', '얏호옹');
+
+dog.say();
+cat.say();
+
+//
+
+function Animal1(type, name, sound) {
+    this.type = type;
+    this.name = name;
+    this.sound = sound;
+}
+
+Animal1.prototype.say = function() {
+    console.log(this.sound);
+};
+Animal1.prototype.sharedValue = 1;
+
+function Dog(name, sound) {
+    Animal1.call(this, '개', name, sound);
+}
+Dog.prototype = Animal1.prototype;
+
+function Cat(name, sound) {
+    Animal1.call(this, '고양이', name, sound);
+}
+Cat.prototype = Animal1.prototype;
+
+const dog1 = new Dog('멍멍이', '멍멍');
+const cat1 = new Cat('야옹이', '야옹');
+
+dog1.say();
+cat1.say();
+
+//
+
