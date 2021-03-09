@@ -444,3 +444,15 @@ const avg = all.reduce((accumulator, current, index, array) => {
     return accumulator + current;
 }, 0);
 console.log(avg);
+
+const alphabets = ['a','a','a','b','c','c','d','e','e'];
+const count = alphabets.reduce((accumulator, current) => {
+    if (accumulator[current]) {
+        accumulator[current] += 1;
+    } else {
+        accumulator[current] = 1;
+    }
+    return accumulator;
+}, {})
+
+console.log(count);
