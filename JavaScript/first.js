@@ -445,14 +445,33 @@ const avg = all.reduce((accumulator, current, index, array) => {
 }, 0);
 console.log(avg);
 
-const alphabets = ['a','a','a','b','c','c','d','e','e'];
-const count = alphabets.reduce((accumulator, current) => {
-    if (accumulator[current]) {
-        accumulator[current] += 1;
+// const alphabets = ['a','a','a','b','c','c','d','e','e'];
+// const count = alphabets.reduce((accumulator, current) => {
+//     if (accumulator[current]) {
+//         accumulator[current] += 1;
+//     } else {
+//         accumulator[current] = 1;
+//     }
+//     return accumulator;
+// }, {})
+//
+// console.log(count);
+
+// 퀴즈
+
+// 10보다 큰 숫자는 몇개인지 구해보자
+
+const btt = [1, 2, 3, 5, 10, 20, 30, 40, 50, 60];
+
+const count = btt.reduce((accumulator, current) => {
+    if (current > 10) {
+        return accumulator + 1;
     } else {
-        accumulator[current] = 1;
+        return accumulator;
     }
-    return accumulator;
-}, {})
+}, 0);
 
 console.log(count);
+
+//---------------------------------
+
