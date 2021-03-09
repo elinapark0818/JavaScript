@@ -474,4 +474,68 @@ const count = btt.reduce((accumulator, current) => {
 console.log(count);
 
 //---------------------------------
-
+//
+// // forEach
+// function countBiggerThenTen(numbers){
+//     let cnt = 0
+//     numbers.forEach(n => {
+//         cnt += n>10 ? 1 : 0
+//     })
+//     return cnt
+// }
+//
+// const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
+// console.log(count)
+//
+// // 출력 : 5
+//
+// // for
+// function countBiggerThenTen(numbers){
+//     let cnt = 0
+//     for(let i=0;i<numbers.length;i++) {
+//         cnt += numbers[i]>10 ? 1 : 0
+//     }
+//     return cnt
+// }
+//
+// const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
+// console.log(count)
+// // 출력 : 5
+//
+// // map
+// function countBiggerThenTen(numbers){
+//     let cnt = 0;
+//     numbers.map((n) => {
+//         cnt += n > 10 ? 1 : 0
+//     })
+//     return cnt
+// }
+//
+// const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
+// console.log(count)
+// // 출력 : 5
+//
+// // filter
+// function countBiggerThenTen(numbers){
+//     let cnt = 0;
+//     numbers.filter((n) => {
+//         cnt += n > 10 ? 1 : 0
+//     })
+//     return cnt
+// }
+//
+// const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
+// console.log(count)
+// // 출력 : 5
+//
+// // reduce
+// function countBiggerThenTen(numbers){
+//     let cnt = numbers.reduce((res, cval, idx, arr) => {
+//         return res += cval > 10 ? 1 : 0
+//     }, 0)
+//     return cnt
+// }
+//
+// const count = countBiggerThenTen([1, 2, 3, 5, 10, 20, 30, 40, 50, 60])
+// console.log(count)
+// // 출력 : 5
