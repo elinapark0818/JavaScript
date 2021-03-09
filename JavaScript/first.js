@@ -395,3 +395,13 @@ const todos = [
 
 const tasksNotDone = todos.filter(todo => !todo.done);
 console.log(tasksNotDone)
+
+const num = [10, 20, 30, 40];
+// const index = num.indexOf(30);
+// const spliced = num.splice(index, 1);
+// console.log(num);
+// console.log(spliced);
+
+const sliced = num.slice(0, 2);
+console.log(sliced);
+console.log(num);
