@@ -427,3 +427,8 @@ const arr2 = [4, 5, 6];
 // const concated = arr1.concat(arr2);
 const concated = [...arr1, ...arr2];
 console.log(concated);
+
+const array1 = [1, 2, 3, 4, 5];
+console.log(array1.join()); // 1,2,3,4,5
+console.log(array1.join(' ')); // 1 2 3 4 5
+console.log(array1.join(', '));
