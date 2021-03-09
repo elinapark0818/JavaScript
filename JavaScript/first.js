@@ -405,3 +405,12 @@ const num = [10, 20, 30, 40];
 const sliced = num.slice(0, 2);
 console.log(sliced);
 console.log(num);
+
+// const value = num.shift();
+// num.shift();
+// console.log(value);
+// console.log(num);
+
+const value = num.pop();
+console.log(value);
+console.log(num);
