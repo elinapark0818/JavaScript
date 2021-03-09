@@ -662,3 +662,6 @@ console.log(!null);
 console.log(!0);
 console.log(!'');
 console.log(!NaN);
+
+// Falsy : null, undefined, 0, '', NaN
+//     Truthy = Falsy가 아닌 것
