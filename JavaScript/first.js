@@ -588,3 +588,33 @@ cat1.say();
 
 //
 
+class Am {
+    constructor(type, name, sound) {
+        this.type = type;
+        this.name = name;
+        this.sound = sound;
+    }
+    say() {
+        console.log(this.sound);
+    }
+}
+
+console.log(Am.prototype.say);
+
+class DD extends Am {
+    constructor(name, sound) {
+        super('두더지', name, sound);
+    }
+}
+
+class CC extends Am {
+    constructor(name, sound) {
+        super('오리너구리', name, sound);
+    }
+}
+
+const dd = new DD('뚜지', '우헤헿');
+const cc = new CC( '오구', '따란!');
+
+dd.say();
+cc.say();
