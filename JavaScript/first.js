@@ -414,3 +414,9 @@ console.log(num);
 const value = num.pop();
 console.log(value);
 console.log(num);
+
+num.unshift(1);
+console.log(num);
+
+num.push(50);
+console.log(num);
