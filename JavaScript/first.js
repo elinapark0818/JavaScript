@@ -677,11 +677,6 @@ for(let i = 2; i <= 9; i++) {
 }
 //
 
-const input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
-const n = N(input[0]);
-for (let i= 1; i < 10; i++) {
-    console.log(`${n}*${i}=${n*i}`);
-}
 
 console.log(true && 'hello'); // hello
 console.log(false && 'hello'); // false
@@ -743,3 +738,44 @@ const calculateCircleArea = (r = 1) => Math.PI * r * r;
 
 const area = calculateCircleArea();
 console.log(area); // 3.141592653589793
+
+//------------------------------
+
+function getSound(animal) {
+    const sounds = {
+        개: '멍멍!',
+        고양이: '야옹~',
+        참새: '짹짹',
+        비둘기: '구구 구 구'
+    };
+    return sounds[animal] || '...?';
+}
+
+console.log(getSound('개')); // 멍멍!
+console.log(getSound('비둘기')); // 구구 구 구
+console.log(getSound('인간'));
+
+function makeSound(animal) {
+    const tasks = {
+        개: () => {
+            console.log('멍멍');
+        },
+        고양이() {
+            console.log('야옹~');
+        },
+        참새() {
+            console.log('짹짹!!!');
+        }
+    };
+
+    const task = tasks[animal];
+    if (!task) {
+        console.log('...?');
+        return;
+    }
+    task();
+}
+
+makeSound('고양이');
+makeSound('참새');
+makeSound('오리');
