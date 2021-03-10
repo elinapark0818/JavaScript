@@ -682,3 +682,13 @@ const n = N(input[0]);
 for (let i= 1; i < 10; i++) {
     console.log(`${n}*${i}=${n*i}`);
 }
+
+console.log(true && 'hello'); // hello
+console.log(false && 'hello'); // false
+console.log('hello' && 'bye'); // bye
+console.log(null && 'hello'); // null
+console.log(undefined && 'hello'); // undefined
+console.log('' && 'hello'); // ''
+console.log(0 && 'hello'); // 0
+console.log(1 && 'hello'); // hello
+console.log(1 && 1); // 1
