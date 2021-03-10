@@ -692,3 +692,29 @@ console.log('' && 'hello'); // ''
 console.log(0 && 'hello'); // 0
 console.log(1 && 'hello'); // hello
 console.log(1 && 1); // 1
+
+//-----------------------------------
+// const dog = {
+//     name: '멍멍이'
+// };
+//
+// function getName(animal) {
+//     return animal && animal.name;
+// }
+//
+// const name = getName();
+// console.log(name); // undefined
+
+//----------------------------------
+
+// const namelessDog = {
+//     name: ''
+// };
+//
+// function getName(animal) {
+//     const name = animal && animal.name;
+//     return name || '이름이 없는 동물입니다.';
+// }
+//
+// const name = getName(namelessDog);
+// console.log(name); // 이름이 없는 동물입니다.
