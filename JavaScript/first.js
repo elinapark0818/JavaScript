@@ -718,3 +718,28 @@ console.log(1 && 1); // 1
 //
 // const name = getName(namelessDog);
 // console.log(name); // 이름이 없는 동물입니다.
+
+
+//ES5
+function calculateCircleArea1(r) {
+    const radius = r || 1;
+    return Math.PI * radius * radius;
+}
+
+const area1 = calculateCircleArea1();
+console.log(area1); // 3.141592653589793
+
+
+//ES6
+function calculateCircleArea2(r = 1) {
+    return Math.PI * r * r;
+}
+
+const area2 = calculateCircleArea2();
+console.log(area2); // 3.141592653589793
+
+//화살표
+const calculateCircleArea = (r = 1) => Math.PI * r * r;
+
+const area = calculateCircleArea();
+console.log(area); // 3.141592653589793
