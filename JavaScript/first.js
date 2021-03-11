@@ -744,8 +744,6 @@ console.log(area); // 3.141592653589793
 function getSound(animal) {
     const sounds = {
         개: '멍멍!',
-        고양이: '야옹~',
-        참새: '짹짹',
         비둘기: '구구 구 구'
     };
     return sounds[animal] || '...?';
@@ -779,3 +777,110 @@ function makeSound(animal) {
 makeSound('고양이');
 makeSound('참새');
 makeSound('오리');
+
+// const object = { a: 1, b: 2 };
+// //
+// // const { a, b } = object;
+// //
+// // console.log(a); // 1
+// // console.log(b); // 2
+
+// const object = { a: 1, b: 2 };
+//
+// function print({ a, b }) {
+//     console.log(a);
+//     console.log(b);
+// }
+//
+// print(object);
+
+//비구조화 할당시 기본값 설정1
+// const object = { a: 1 };
+//
+// function print({ a, b = 2 }) {
+//     console.log(a);
+//     console.log(b);
+// }
+//
+// print(object);
+// // 1
+// // 2
+
+//비구조화 할당시 기본값 설정2(함수의 파라미터가 아니어도 된다.)
+const object = { a: 1 };
+
+const { a, b = 2 } = object;
+
+console.log(a); // 1
+console.log(b); // 2
+
+//------------------------------------------
+//비구조화 할당 시 이름바꾸기
+
+// const animal = {
+//     name: '멍멍이',
+//     type: '개'
+// };
+//
+// const nickname = animal.name;
+//
+// console.log(nickname); // 멍멍이
+
+const animal = {
+    name: '멍멍이',
+    type: '개'
+};
+
+const { name: nickname } = animal
+console.log(nickname); //멍멍이
+//-----------------------------------------
+//배열 비구조화 할당
+
+// const array__ = [1, 2];
+// const [one, two] = array__;
+//
+// console.log(one);
+// console.log(two);
+
+const array__ = [1];
+const [one, two = 2] = array__;
+
+console.log(one);
+console.log(two);
+
+//----------------------------------------
+
+const deepObject = {
+    state: {
+        information: {
+            name: 'Elina',
+            languages: ['Java', 'Python', 'Javascript']
+        }
+    },
+    score: 100
+};
+
+const { name, languages } = deepObject.state.information;
+const { score } = deepObject;
+
+const extracted = {
+    name,
+    languages,
+    score
+};
+console.log(extracted);
+
+//다른방법(조금 더 지저분해보이지만..)
+// const {
+//     state: {
+//         information: { name, languages }
+//     },
+//     score
+// } = deepObject;
+//
+// const extracted = {
+//     name,
+//     languages,
+//     score
+// };
+// console.log(extracted);
