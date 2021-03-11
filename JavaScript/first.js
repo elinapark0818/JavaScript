@@ -930,7 +930,7 @@ const value = 'hello!';
 
 function myFunction() {
     const value = 'bye!';
-    if (true) {
+    if (true) { //그냥 무조건 작동하는 if문
         const value = 'world';
         console.log('block scope: ');
         console.log(value);
