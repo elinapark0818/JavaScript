@@ -374,9 +374,6 @@ Getter 함수는 특정 값을 조회할 때마다
          done: false
      }
  ]
- // find는  첫번째로 찾은 값 자체를 반환한다
- // const tasksNotDone = todos.filter(todo => !todo.done);
- // console.log(tasksNotDone)
 
  const num = [10, 20, 30, 40];
  const index = num.indexOf(30);
@@ -922,6 +919,26 @@ ES5
  console.log(max);
 */
 
-var arr = [1, 2, 3];
-var max = Math.max(...arr);
-console.log(max);
+// var arr = [1, 2, 3];
+// var max = Math.max(...arr);
+// console.log(max);
+
+//제일 큰값 찾는거 이게 젤 간편하네
+// console.log(Math.max(1, 2, 3, 4, 10, 5, 6, 7));
+
+const value = 'hello!';
+
+function myFunction() {
+    const value = 'bye!';
+    if (true) {
+        const value = 'world';
+        console.log('block scope: ');
+        console.log(value);
+    }
+    console.log('function scope: ');
+    console.log(value);
+}
+
+myFunction();
+console.log('global scope: ');
+console.log(value);
