@@ -755,10 +755,7 @@ console.log(getSound('인간'));
 
 function makeSound(animal) {
     const tasks = {
-        개: () => {
-            console.log('멍멍');
-        },
-        고양이() {
+        고양이: () => {
             console.log('야옹~');
         },
         참새() {
@@ -884,3 +881,21 @@ console.log(extracted);
 //     score
 // };
 // console.log(extracted);
+
+const slime = {
+    name: '슬라임'
+};
+
+const cuteSlime = {
+    ...slime,
+    attribute: 'cute'
+};
+
+const purpleCuteSlime = {
+    ...cuteSlime,
+    color: 'purple'
+};
+
+console.log(slime);
+console.log(cuteSlime);
+console.log(purpleCuteSlime);
