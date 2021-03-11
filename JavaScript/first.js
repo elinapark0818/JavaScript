@@ -899,3 +899,8 @@ const purpleCuteSlime = {
 console.log(slime);
 console.log(cuteSlime);
 console.log(purpleCuteSlime);
+
+const blabla = [1, 2, 3, 4, 5];
+
+const spreadblabla = [...numbers, 1000, ...numbers];
+console.log(spreadblabla);
