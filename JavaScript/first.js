@@ -952,7 +952,7 @@ function work(callback) {
         for (let i = 0; i < 10000; i++) {}
         const end = Date.now();
         callback(end - start + 'ms');
-    }, 0);
+    }, 1000);
 }
 
 console.log('작업 시작!');
@@ -961,3 +961,31 @@ work((endTime) => {
     console.log('작업이 끝났어요');
 });
 console.log('다음 작업')
+
+// promise
+
+function increaseAndPrint(n) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const value = n + 1;
+            if (value === 5) {
+                const error = new Error();
+                error.name = 'ValueIsFiveError'; //에러 이름지어주기
+                reject(error);
+                return;
+            }
+            console.log(value);
+            resolve(value);
+        }, 1000);
+    });
+}
+
+increaseAndPrint(0)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .then(increaseAndPrint)
+    .catch(e => {
+        console.error(e);
+    });
