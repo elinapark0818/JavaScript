@@ -946,23 +946,46 @@ console.log(value)
 
 //비동기처리
 
-function work(callback) {
-    setTimeout(() => {
-        const start = Date.now();
-        for (let i = 0; i < 10000; i++) {}
-        const end = Date.now();
-        callback(end - start + 'ms');
-    }, 1000);
-}
-
-console.log('작업 시작!');
-work((endTime) => {
-    console.log(endTime);
-    console.log('작업이 끝났어요');
-});
-console.log('다음 작업')
+// function work(callback) {
+//     setTimeout(() => {
+//         const start = Date.now();
+//         for (let i = 0; i < 10000; i++) {}
+//         const end = Date.now();
+//         callback(end - start + 'ms');
+//     }, 1000);
+// }
+//
+// console.log('작업 시작!');
+// work((endTime) => {
+//     console.log(endTime);
+//     console.log('작업이 끝났어요');
+// });
+// console.log('다음 작업')
 
 // promise
+
+//
+
+
+new Promise(function(resolve, reject){
+    setTimeout(function() {
+        resolve(1);
+    }, 2000);
+})
+    .then(function(result) {
+        console.log(result); // 1
+        return result + 10;
+    })
+    .then(function(result) {
+        console.log(result); // 11
+        return result + 20;
+    })
+    .then(function(result) {
+        console.log(result); // 31
+    });
+
+
+//
 
 function increaseAndPrint(n) {
     return new Promise((resolve, reject) => {
