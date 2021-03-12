@@ -1024,24 +1024,20 @@ function LCS(inputString) {
     const len1 = string1.length
     const len2 = string2.length
 
-    if (len2 === 0 || len1 === 0)
-        return 0
+    if (len2 === 0 || len1 === 0) return 0
 
     if (string1[len1 - 1] === string2[len2 - 1]) {
-        return 1 + LCS(`${string1.substring(0, len1 - 1)}
-        \n${string2.substring(0, len2 - 1)}`)
+        return 1 + LCS(`${string1.substring(0, len1 - 1)}\n${string2.substring(0, len2 - 1)}`)
     } else {
         return Math.max(
-            LCS(`${string1.substring(0, len1 - 1)}
-            \n${string2.substring(0, len2)}`),
-            LCS(`${string1.substring(0, len1)}
-            \n${string2.substring(0, len2 - 1)}`)
+            LCS(`${string1.substring(0, len1 - 1)}\n${string2.substring(0, len2)}`),
+            LCS(`${string1.substring(0, len1)}\n${string2.substring(0, len2 - 1)}`)
         )
     }
 }
 
-const count = LCS(`editdistanceproblem
-dijkstraalgorithm`)
+const count = LCS(`apple
+application`)
 
 console.log(count)
 
