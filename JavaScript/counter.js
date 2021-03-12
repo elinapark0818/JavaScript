@@ -15,7 +15,7 @@
 
 
 const number = document.getElementById("number");
-const buttons = document.querySelectorAll("button"); //id가 없을 때(html)
+const buttons = document.querySelectorAll("button"); //id가 없을 때(html) 태그이름으로 찾기
 const [increase, decrease] = buttons;
 
 increase.onclick = () => {
