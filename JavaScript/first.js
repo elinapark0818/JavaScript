@@ -1041,3 +1041,71 @@ application`)
 
 console.log(count)
 
+
+
+//promise.all을 사용하면 한 방에(가장 큰 ms에 맞춰) 결과값이 나온당
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const getDog = async () => {
+    await sleep(1000);
+    return '강아지';
+};
+
+const getRabbit = async () => {
+    await sleep(500);
+    return '토끼';
+};
+const getTurtle = async () => {
+    await sleep(3000);
+    return '거북이';
+};
+
+async function process() {  //배열 비구조화 할당 문법을 사용하면, 각 결과값을 따로 추출가능하닷
+    const [dog, rabbit, turtle] = await Promise.all([
+        getDog(),
+        getRabbit(),
+        getTurtle()
+    ]);
+    console.log(dog);
+    // console.log(rabbit);
+    console.log(turtle);  //거북이가 3000ms라서 3초뒤에 콘솔창에 다 나올거임
+}
+
+let promise = process();  //인텔리제이가 let을 추천해줘서 바꼈는데, 결과엔 차이가 없당
+
+//주의: Promise.all 를 사용 할 때에는 등록한 프로미스 중 하나라도 실패하면, 모든게 실패 한 것으로 간주한다
+
+
+//promise.race 경주니까 젤 빠른거 하나만 나올듯?
+
+function speed(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const getHoomin = async () => {
+    await speed(1000);
+    return '후민';
+};
+
+const getElina = async () => {
+    await speed(500);
+    return '엘리나';
+};
+const getTiger = async () => {
+    await speed(3000);
+    return '호랑이';
+};
+
+async function speedrace() {
+    const first = await Promise.race([
+        getHoomin(),
+        getElina(),
+        getTiger()
+    ]);
+    console.log(first);
+}
+
+speedrace();
