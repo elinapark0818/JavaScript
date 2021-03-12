@@ -926,22 +926,22 @@ ES5
 //제일 큰값 찾는거 이게 젤 간편하네
 // console.log(Math.max(1, 2, 3, 4, 10, 5, 6, 7));
 
-const value = 'hello!';
-
-function myFunction() {
-    const value = 'bye!';
-    if (true) { //그냥 무조건 작동하는 if문
-        const value = 'world';
-        console.log('block scope: ');
-        console.log(value);
-    }
-    console.log('function scope: ');
-    console.log(value);
-}
-
-myFunction();
-console.log('global scope: ');
-console.log(value)
+// const value = 'hello!';
+//
+// function myFunction() {
+//     const value = 'bye!';
+//     if (true) { //그냥 무조건 작동하는 if문
+//         const value = 'world';
+//         console.log('block scope: ');
+//         console.log(value);
+//     }
+//     console.log('function scope: ');
+//     console.log(value);
+// }
+//
+// myFunction();
+// console.log('global scope: ');
+// console.log(value)
 
 
 //비동기처리
@@ -966,49 +966,82 @@ console.log(value)
 
 //
 
-
-new Promise(function(resolve, reject){
-    setTimeout(function() {
-        resolve(1);
-    }, 2000);
-})
-    .then(function(result) {
-        console.log(result); // 1
-        return result + 10;
-    })
-    .then(function(result) {
-        console.log(result); // 11
-        return result + 20;
-    })
-    .then(function(result) {
-        console.log(result); // 31
-    });
-
-
 //
+// new Promise(function(resolve, reject){
+//     setTimeout(function() {
+//         resolve(1);
+//     }, 2000);
+// })
+//     .then(function(result) {
+//         console.log(result); // 1
+//         return result + 10;
+//     })
+//     .then(function(result) {
+//         console.log(result); // 11
+//         return result + 20;
+//     })
+//     .then(function(result) {
+//         console.log(result); // 31
+//     });
+//
+//
+// //
+//
+// function increaseAndPrint(n) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const value = n + 1;
+//             if (value === 5) {
+//                 const error = new Error();
+//                 error.name = 'ValueIsFiveError'; //에러 이름지어주기
+//                 reject(error);
+//                 return;
+//             }
+//             console.log(value);
+//             resolve(value);
+//         }, 1000);
+//     });
+// }
+//
+// increaseAndPrint(0)
+//     .then(increaseAndPrint)
+//     .then(increaseAndPrint)
+//     .then(increaseAndPrint)
+//     .then(increaseAndPrint)
+//     .then(increaseAndPrint)
+//     .catch(e => {
+//         console.error(e);
+//     });
 
-function increaseAndPrint(n) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const value = n + 1;
-            if (value === 5) {
-                const error = new Error();
-                error.name = 'ValueIsFiveError'; //에러 이름지어주기
-                reject(error);
-                return;
-            }
-            console.log(value);
-            resolve(value);
-        }, 1000);
-    });
+//최대공통부분수열(LCS)
+
+function LCS(inputString) {
+    const input = inputString.split("\n")
+
+    const string1 = input[0]
+    const string2 = input[1]
+
+    const len1 = string1.length
+    const len2 = string2.length
+
+    if (len2 === 0 || len1 === 0)
+        return 0
+
+    if (string1[len1 - 1] === string2[len2 - 1]) {
+        return 1 + LCS(`${string1.substring(0, len1 - 1)}
+        \n${string2.substring(0, len2 - 1)}`)
+    } else {
+        return Math.max(
+            LCS(`${string1.substring(0, len1 - 1)}
+            \n${string2.substring(0, len2)}`),
+            LCS(`${string1.substring(0, len1)}
+            \n${string2.substring(0, len2 - 1)}`)
+        )
+    }
 }
 
-increaseAndPrint(0)
-    .then(increaseAndPrint)
-    .then(increaseAndPrint)
-    .then(increaseAndPrint)
-    .then(increaseAndPrint)
-    .then(increaseAndPrint)
-    .catch(e => {
-        console.error(e);
-    });
+const count = LCS(`editdistanceproblem
+dijkstraalgorithm`)
+
+console.log(count)
+
