@@ -71,7 +71,18 @@ function plus(base) {
 }
 
 const plus5 = plus(5);
-console.log(plus5(10));
+console.log(plus5(10)); //15
 
 const plus7 = plus(7);
-console.log(plus7(8));
+console.log(plus7(8)); //15
+
+// 함수를 인자로 하여 함수를 호출하기
+
+function hello(callback) {
+    console.log('hello');
+    callback();
+}
+
+hello(function () {
+    console.log('콜백');
+});
