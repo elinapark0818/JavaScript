@@ -56,9 +56,22 @@ console.log(p, p.name, p.age);
 const h = new Person('Hoomin', 29);
 console.log(h, h.name, h.age);
 
-const Cat = (name, age) => {
-    console.log(this) // TypeError: Cat is not a constructor
-    this.name = name;
-    this.age = age;
-};
-const c = new Cat('나옹', 2);  //안된당
+// const Cat = (name, age) => {
+//     console.log(this) // TypeError: Cat is not a constructor
+//     this.name = name;
+//     this.age = age;
+// };
+// const c = new Cat('나옹', 2);  //안된당
+//
+
+function plus(base) {
+    return function (num) {
+        return base + num;
+    }
+}
+
+const plus5 = plus(5);
+console.log(plus5(10));
+
+const plus7 = plus(7);
+console.log(plus7(8));
