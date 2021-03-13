@@ -43,3 +43,22 @@ const hello4 = name => {
 };
 
 const hello5 = name => `hello5 ${name}`;
+
+function Person(name, age) {
+    console.log(this);
+    this.name = name;
+    this.age = age;
+}
+
+const p = new Person('Elina', 30);
+console.log(p, p.name, p.age);
+
+const h = new Person('Hoomin', 29);
+console.log(h, h.name, h.age);
+
+const Cat = (name, age) => {
+    console.log(this) // TypeError: Cat is not a constructor
+    this.name = name;
+    this.age = age;
+};
+const c = new Cat('나옹', 2);  //안된당
