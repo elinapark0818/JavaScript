@@ -128,3 +128,20 @@ k.where();
 console.log(k instanceof Korean);
 console.log(k instanceof Person);
 console.log(k instanceof Object);
+
+//표준 내장 객체: Array
+
+const ar = new Array('red', 'black', 'white');
+
+console.log(ar, typeof ar);
+console.log(ar instanceof Array);
+console.log(ar instanceof Object);
+
+const br = ['gray', 'pink', 'yellow'];
+
+console.log(br, typeof br);
+console.log(br instanceof Array);
+console.log(br instanceof Object);
+
+console.log(br.slice(0, 1));
+console.log(Array.prototype.slice, Object.prototype.slice); // Object는 undefined.
