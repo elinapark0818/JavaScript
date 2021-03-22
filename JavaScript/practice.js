@@ -43,12 +43,12 @@ const hello4 = name => {
 };
 
 const hello5 = name => `hello5 ${name}`;
-
-function Person(name, age) {
-    console.log(this);
-    this.name = name;
-    this.age = age;
-}
+//
+// function Person(name, age) {
+//     console.log(this);
+//     this.name = name;
+//     this.age = age;
+// }
 
 const p = new Person('Elina', 30);
 console.log(p, p.name, p.age);
