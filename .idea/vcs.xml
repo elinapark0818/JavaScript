@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/JavaScript/dream/mini-shopping" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JavaScript/mini-shopping" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/fc-js-project" vcs="Git" />
   </component>
 </project>
