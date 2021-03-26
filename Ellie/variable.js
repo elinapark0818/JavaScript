@@ -1,5 +1,9 @@
+//added in ES5
+//use this for Vanila Javascript
 'use strict';
 
+// variable, rw(read/write)
+// let (added in ES6)
 let globalName = 'global name';
 {
     let name = 'elina';
@@ -10,16 +14,27 @@ let globalName = 'global name';
 console.log(name);
 console.log(globalName);
 
-// Contant
+// Contant, r(read only)
+// use const whenever possible
+// only use let of variable needs to change
 
+
+// Note!
+// Immutable data types: primitive type, frozen objects (i.e. object.freeze())
+// Mutable data types: all object by default are mutable in JavaScript
+
+// favor immutable data type always for a few reasons:
+// - security
+// - thread safety
+// - reduce human mistakes
 const daysInWeek = 7;
 console.log(daysInWeek);
 const maxNumber = 5;
 console.log(maxNumber);
 
 // Variable types
-// primitive, single item: number, string, boolean, null, undefined, symbol
-// object, box container
+// primitive, single item: number, string, boolean, null, undefined, symbol : 값(value) 자체가 메모리에 저장된다
+// object, box container object를 가리키는 레퍼런스가 메모리에 저장된다
 // function, first-class function 함수를 변수에 할당 가능하다
 
 const count = 17; //integer
