@@ -73,12 +73,12 @@ function printMessage() {
         let childMessage = 'hello';
     }
 
-    console.log(childMessage); // 자식이 부모 밖에서 안된다
+    // console.log(childMessage); // 자식이 부모 밖에서 안된다
     return undefined; //생략 가능
 }
 
 printMessage();
-console.log(message); // 안된다
+// console.log(message); // 안된다
 
 
 // Return a value
@@ -128,10 +128,11 @@ console.log(sumAgain(1, 3));
 function randomQuiz(answer, printYes, printNo) {
     if (answer === 'love you') {
         printYes();
-    }else {
+    } else {
         printNo();
     }
 }
+
 // anonymous function
 const printYes = function () {
     console.log('Yes!');
@@ -154,11 +155,11 @@ const simplePrint = function () {
     console.log('simplePrint!');
 };
 
-const simplePrint = () => console.log('simplePrint!');
+// const simplePrint = () => console.log('simplePrint!');
 
 const add = (a, b) => a + b;
 
-const simpleMultiply = (a,b) => {
+const simpleMultiply = (a, b) => {
     //do something more
     return a * b;
 };
@@ -174,23 +175,26 @@ const simpleMultiply = (a,b) => {
 
 
 function calculate(command, a, b) {
-switch (command) {
-    case '+':
-        console.log(a + b);
-break;
-    case '-':
-        console.log(a-b);
-break;
-    case '*':
-        console.log(a*b);
-break;
-    case '/':
-        console.log(a/b);
-break;
-    case '%':
-        console.log(a%b);
-break;
-    default:
-        console.log('unknown!');
-break;}
+    switch (command) {
+        case '+':
+            console.log(a + b);
+            break;
+        case '-':
+            console.log(a - b);
+            break;
+        case '*':
+            console.log(a * b);
+            break;
+        case '/':
+            console.log(a / b);
+            break;
+        case '%':
+            console.log(a % b);
+            break;
+        default:
+            console.log('unknown!');
+            break;
+    }
 }
+
+console.log(calculate('+',5,14));
