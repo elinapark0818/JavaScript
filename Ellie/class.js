@@ -69,3 +69,21 @@ const experiment = new Experiment();
 console.log(experiment.publicField);
 console.log(experiment.privateField);
 
+// Static properties and methods
+// Too soon
+class Article {
+    static publisher = 'Dream Cording';
+    constructor(articleNumber) {
+        this.articleNumber = articleNumber;
+    }
+    static printPublisher() {
+        console.log(Article.publisher);
+    }
+}
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(article1.publisher); // undefined
+console.log(Article.publisher)
+Article.printPublisher();
+// Object에 상관없이(들어오는 데이터에 상관없이) 공통적으로 Class에서 쓸수있는 거라면 사용시 메모리 줄일 수 있다.
+
