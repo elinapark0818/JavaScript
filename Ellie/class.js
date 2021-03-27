@@ -112,6 +112,10 @@ class Triangle extends Shape {
     getArea() {
         return (this.width * this.height) /2;
     }
+
+    toString() {
+        return `Triangle: color: ${this.color}`;
+    }
 }
 
 const rectangle = new Rectangle(20, 20, 'blue');
@@ -121,3 +125,11 @@ console.log(rectangle.getArea());
 const triangle = new Triangle(10, 20, 'red');
 triangle.draw();
 console.log(triangle.getArea());
+
+// Class checking: instanceOf 오브젝트가 클래스를 통해 만들어진건지 확인하는 거다
+console.log(rectangle instanceof Rectangle); //true
+console.log(triangle instanceof Rectangle); //false
+console.log(triangle instanceof Triangle); //true
+console.log(triangle instanceof Shape); //true 상속했으니까
+console.log(triangle instanceof Object); // true 모든 오브젝트는 오브젝트를 상속한다
+console.log(triangle.toString()); //
