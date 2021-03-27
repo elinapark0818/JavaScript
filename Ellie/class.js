@@ -58,3 +58,14 @@ class User {
 const user1 = new User('Steve', 'Job', -1);
 console.log(user1.age);
 
+// Fields (public, private)
+// Too soon
+
+class Experiment {
+    publicField = 2; // 외부에서 접근이 가능하다
+    #privateField = 0; // #, Class 내부에서만 가능 외부에서 불가
+}
+const experiment = new Experiment();
+console.log(experiment.publicField);
+console.log(experiment.privateField);
+
