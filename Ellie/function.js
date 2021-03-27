@@ -198,3 +198,22 @@ function calculate(command, a, b) {
 }
 
 console.log(calculate('+',5,14));
+
+
+function ellie(command, a, b) {
+    switch (command) {
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'multiply':
+            return a * b;
+        case 'remainder':
+            return a % b;
+        default:
+            throw Error ('unknown command');
+    }
+}
+console.log(ellie('multiply', 5, 4));
