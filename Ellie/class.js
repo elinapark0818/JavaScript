@@ -105,6 +105,10 @@ class Shape {
 
 class Rectangle extends Shape {}
 class Triangle extends Shape {
+    draw() {
+        super.draw(); //부모 메소드도 출력하게끔
+        console.log('📐');
+    }
     getArea() {
         return (this.width * this.height) /2;
     }
