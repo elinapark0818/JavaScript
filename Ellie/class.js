@@ -87,3 +87,23 @@ console.log(Article.publisher)
 Article.printPublisher();
 // Object에 상관없이(들어오는 데이터에 상관없이) 공통적으로 Class에서 쓸수있는 거라면 사용시 메모리 줄일 수 있다.
 
+// Inheritance
+// a way for one class to extend another class
+class Shape {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+    draw() {
+        console.log(`drawing ${this.color} color of`);
+    }
+    getArea() {
+        return width * this.height;
+    }
+}
+
+class Rectangle extends Shape {}
+
+const rectangle = new Rectangle(20, 20, 'blue');
+rectangle.draw();
