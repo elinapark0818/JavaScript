@@ -2,7 +2,7 @@
 
 // Object
 // one of the JavaScript's data types
-// a collection of related data and/or fuctionality
+// a collection of related data and/or functionality
 // Nearly all objects in JavaScript are instances of Object
 // Object = {key : value}; 오브젝트는 키와 밸류의 집합체다
 
@@ -15,7 +15,7 @@
 // }
 
 // Literals and properties
-const obj1 = {}; // 'object literal' syntax
+// const obj1 = {}; // 'object literal' syntax
 // const obj2 = new Object(); // 'object constructor' syntax
 
 function print(person) {
@@ -51,22 +51,61 @@ printValue(hoo, 'name');
 printValue(hoo, 'age'); //동적으로 key에 관련된 값을 불러올때 유용하게 사용될 수 있다
 
 // Property value shorthand
-const person1 = { name: 'bobby', age: 4};
-const person2 = { name: 'yunjung', age: 5};
-const person3 = { name: 'hooming', age: 7};
+const person1 = {name: 'bobby', age: 4};
+const person2 = {name: 'yunjung', age: 5};
+const person3 = {name: 'hooming', age: 7};
 
 
 // Constructor function
 const person4 = new Person('loovie', 10);
 console.log(person4);
+
 function Person(name, age) {
     // this = {};
-        this.name = name;
-        this.age = age;
-    }
+    this.name = name;
+    this.age = age;
+}
 
-    // in operator: property existence check (key in object)
+// in operator: property existence check (key in object)
 console.log('name' in elina);
 console.log('age' in elina);
 console.log('random' in elina); //false
 console.log(elina.random); //undefined
+
+// for..in vs for..of
+// for (key in object)
+// console.clear();
+// for (key in hoo) {
+//     console.log(key);
+// }
+
+
+// const array = [1,3,4,5];
+// for (let i= 0; i < array.length; i++) {
+//     console.log(array[i]);
+// }
+
+// for (value of iterable) 왜 안되지..
+// const array = [1, 3, 4, 5];
+// for (value of array) {
+//     console.log(value);
+// }
+
+// Fun cloning
+// Object.assign(dest, [obj1, obj2, obj3...])
+const user = {name: 'ellie', age: '20' };
+const user2 = user;
+user2.name = 'coder';
+console.log(user);
+
+// // old way
+// const user3 = {};
+// for (key in user) {
+//     user3[key] = user[key];
+// }
+// console.log(user3);
+console.clear();
+
+const user4 = {};
+Object.assign(user4, user);
+console.log(user4);
