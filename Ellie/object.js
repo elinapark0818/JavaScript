@@ -51,17 +51,18 @@ printValue(hoo, 'name');
 printValue(hoo, 'age'); //동적으로 key에 관련된 값을 불러올때 유용하게 사용될 수 있다
 
 // Property value shorthand
-const person1 = {name: bobby, age: 4};
-const person2 = {name: yun, age: 5};
-const person3 = {name: hooming, age: 7};
-const person4 = makePerson('loovie', 10);
-console.log(person4);
+const person1 = { name: 'bobby', age: 4};
+const person2 = { name: 'yunjung', age: 5};
+const person3 = { name: 'hooming', age: 7};
 
-function makePerson(name, age) {
-    return {
-        name,
-        age,
-    };
-}
+
+// Constructor function
+const person4 = new Person('loovie', 10);
+console.log(person4);
+function Person(name, age) {
+    // this = {};
+        this.name = name;
+        this.age = age;
+    }
 
 
