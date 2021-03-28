@@ -65,4 +65,8 @@ function Person(name, age) {
         this.age = age;
     }
 
-
+    // in operator: property existence check (key in object)
+console.log('name' in elina);
+console.log('age' in elina);
+console.log('random' in elina); //false
+console.log(elina.random); //undefined
