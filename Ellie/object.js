@@ -72,39 +72,42 @@ console.log('age' in elina);
 console.log('random' in elina); //false
 console.log(elina.random); //undefined
 
+
 // for..in vs for..of
 // for (key in object)
 // console.clear();
-// for (key in hoo) {
-//     console.log(key);
-// }
-
+for (let key in hoo) {
+    console.log(key);
+}
 
 // const array = [1,3,4,5];
 // for (let i= 0; i < array.length; i++) {
 //     console.log(array[i]);
 // }
 
+
+console.clear();
 // for (value of iterable) 왜 안되지..
-// const array = [1, 3, 4, 5];
-// for (value of array) {
-//     console.log(value);
-// }
+const array = [1, 3, 4, 5];
+for (let value of array) {
+    console.log(value);
+}
+
 
 // Fun cloning
 // Object.assign(dest, [obj1, obj2, obj3...])
 const user = {name: 'ellie', age: '20' };
-const user2 = user;
-user2.name = 'coder';
+const user5 = user;
+user5.name = 'coder';
 console.log(user);
 
-// // old way
-// const user3 = {};
-// for (key in user) {
-//     user3[key] = user[key];
-// }
-// console.log(user3);
-console.clear();
+
+// old way  요것도 왜 안될까.. 오호! 요건 let을 key 앞에 붙이니까 됐따
+const user3 = {};
+for (let key in user) {
+    user3[key] = user[key];
+}
+console.log(user3);
 
 const user4 = Object.assign({}, user);
 console.log(user4);
