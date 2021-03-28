@@ -86,7 +86,7 @@ for (let key in hoo) {
 // }
 
 
-console.clear();
+
 // for (value of iterable) 왜 안되지..
 const array = [1, 3, 4, 5];
 for (let value of array) {
