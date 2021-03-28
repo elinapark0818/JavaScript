@@ -106,6 +106,5 @@ console.log(user);
 // console.log(user3);
 console.clear();
 
-const user4 = {};
-Object.assign(user4, user);
+const user4 = Object.assign({}, user);
 console.log(user4);
