@@ -67,7 +67,7 @@ class Experiment {
 }
 const experiment = new Experiment();
 console.log(experiment.publicField);
-console.log(experiment.privateField);
+console.log(experiment.privateField); //undefined
 
 // Static properties and methods
 // Too soon
