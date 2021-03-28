@@ -16,13 +16,14 @@
 
 // Literals and properties
 const obj1 = {}; // 'object literal' syntax
-const obj2 = new Object(); // 'object constructor' syntax
+// const obj2 = new Object(); // 'object constructor' syntax
 
 function print(person) {
     console.log(person.name);
     console.log(person.age);
 }
 
+const elina = {name: 'elina', age: 30};
 const hoo = {name: 'hoo', age: 29}; //자바스크립트는 다이나믹 런타임 가능
 print(hoo);
 
@@ -45,16 +46,22 @@ console.log(hoo.hasJob);
 function printValue(obj, key) {
     console.log(obj[key]);
 }
+
 printValue(hoo, 'name');
 printValue(hoo, 'age'); //동적으로 key에 관련된 값을 불러올때 유용하게 사용될 수 있다
 
+// Property value shorthand
+const person1 = {name: bobby, age: 4};
+const person2 = {name: yun, age: 5};
+const person3 = {name: hooming, age: 7};
+const person4 = makePerson('loovie', 10);
+console.log(person4);
+
+function makePerson(name, age) {
+    return {
+        name,
+        age,
+    };
+}
 
 
-
-
-
-
-
-
-
-const elina = {name: 'elina', age: 30};
