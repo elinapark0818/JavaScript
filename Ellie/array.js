@@ -33,3 +33,12 @@ for (let fruit of fruits) {
 //     console.log(fruit,index);
 // })
 fruits.forEach((fruit, index) => console.log(fruit, index));
+
+// Addition, deletion, copy
+// push : add an item to the end
+console.clear()
+fruits.push('🍌','🍉');
+console.log(fruits);
+// pop : remove an item from the end
+fruits.pop();
+console.log(fruits);
