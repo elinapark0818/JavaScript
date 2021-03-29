@@ -63,3 +63,8 @@ fruits.splice(1,1);
 console.log(fruits);
 fruits.splice(1,1,'🍙','🍜');
 console.log(fruits);
+
+// combine two arrays
+const fruits2 = ['🌶','🧄'];
+const newFruits = fruits.concat(fruits2);
+console.log(newFruits);
