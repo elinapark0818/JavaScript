@@ -68,3 +68,13 @@ console.log(fruits);
 const fruits2 = ['🌶','🧄'];
 const newFruits = fruits.concat(fruits2);
 console.log(newFruits);
+
+// Searching
+// indexOf : find the index
+console.clear();
+console.log(fruits);
+console.log(fruits.indexOf('🍇'));
+console.log(fruits.indexOf('🍉')); // 없는 값은 -1
+// includes
+console.log(fruits.includes('🍅')); // true
+console.log(fruits.includes('🍒')); // false
