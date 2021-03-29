@@ -42,3 +42,13 @@ console.log(fruits);
 // pop : remove an item from the end
 fruits.pop();
 console.log(fruits);
+
+console.clear()
+// unshift : add an item to the beginning
+fruits.unshift('🍋','🍄');
+console.log(fruits);
+// shift : remove an item from the beginning
+fruits.shift();
+console.log(fruits);
+fruits.shift();
+console.log(fruits);
