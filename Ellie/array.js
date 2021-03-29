@@ -28,4 +28,8 @@ for (let fruit of fruits) {
 }
 
 // forEach
+
+// fruits.forEach(function (fruit,index) {
+//     console.log(fruit,index);
+// })
 fruits.forEach((fruit, index) => console.log(fruit, index));
