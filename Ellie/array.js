@@ -79,7 +79,7 @@ console.log(fruits.indexOf('🍉')); // 없는 값은 -1
 console.log(fruits.includes('🍅')); // true
 console.log(fruits.includes('🍒')); // false
 
-// lastIndexof
+// lastIndexOf
 console.clear();
 fruits.push('🍅');
 console.log(fruits);
