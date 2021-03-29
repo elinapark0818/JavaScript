@@ -78,3 +78,10 @@ console.log(fruits.indexOf('🍉')); // 없는 값은 -1
 // includes
 console.log(fruits.includes('🍅')); // true
 console.log(fruits.includes('🍒')); // false
+
+// lastIndexof
+console.clear();
+fruits.push('🍅');
+console.log(fruits);
+console.log(fruits.indexOf('🍅'));
+console.log(fruits.lastIndexOf('🍅'));
