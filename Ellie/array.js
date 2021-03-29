@@ -26,3 +26,6 @@ for (let i = 0; i < fruits.length; i++) {
 for (let fruit of fruits) {
     console.log(fruit);
 }
+
+// forEach
+fruits.forEach((fruit, index) => console.log(fruit, index));
