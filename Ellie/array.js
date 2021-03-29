@@ -52,3 +52,5 @@ fruits.shift();
 console.log(fruits);
 fruits.shift();
 console.log(fruits);
+
+// Note! : shift/unshift are slower than pop/push
