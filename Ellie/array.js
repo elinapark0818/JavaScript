@@ -110,6 +110,6 @@ const array1 = [1, 30, 39, 29, 10, 13];
 console.log(array1.every(isBelowThreshold));
 // expected output: true
 
-const array2 = [41, 1, 30, 38, 22, 13, 9];
+const array2 = [41, 1, 30, 38, 22, 13, 9]; // 하나라도 콜백함수에 부합하지 않는 요소가 있다면 false
 console.log(array2.every(isBelowThreshold));
 // expected output : false
