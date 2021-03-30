@@ -7,3 +7,17 @@
 console.log('1');
 setTimeout( () => console.log('2'), 1000); // 브라우저 API, 브라우저에게 먼저 요청한다
 console.log('3');
+
+// Synchronous callback
+function printImmediately(print) {
+    print();
+} // 호이스팅이 되었을 거다. 맨위로
+
+printImmediately(()=>console.log('hello'));
+
+// Asynchronous callback
+function printWithDelay(print, timeout) {
+    setTimeout(print, timeout);
+} // 호이스팅
+
+printWithDelay(()=> console.log('async callback'), 2000);
