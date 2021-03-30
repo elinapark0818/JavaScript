@@ -100,3 +100,16 @@ console.log(numbers.sort(function (a, b) {
 console.log(numbers.sort(function (a, b) {
     return b - a;
 }));
+
+// every
+
+const isBelowThreshold = (currentValue) => currentValue < 40; // 40보다 작은지
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// expected output: true
+
+const array2 = [41, 1, 30, 38, 22, 13, 9];
+console.log(array2.every(isBelowThreshold));
+// expected output : false
