@@ -37,7 +37,7 @@ fruits.forEach((fruit, index) => console.log(fruit, index));
 // Addition, deletion, copy
 // push : add an item to the end
 console.clear()
-fruits.push('🍌','🍉');
+fruits.push('🍌', '🍉');
 console.log(fruits);
 // pop : remove an item from the end
 fruits.pop();
@@ -45,7 +45,7 @@ console.log(fruits);
 
 console.clear()
 // unshift : add an item to the beginning
-fruits.unshift('🍋','🍄');
+fruits.unshift('🍋', '🍄');
 console.log(fruits);
 // shift : remove an item from the beginning
 fruits.shift();
@@ -57,15 +57,15 @@ console.log(fruits);
 
 // splice: remove an item by index position
 console.clear();
-fruits.push('🥝','🍇','🍎');
+fruits.push('🥝', '🍇', '🍎');
 console.log(fruits);
-fruits.splice(1,1);
+fruits.splice(1, 1);
 console.log(fruits);
-fruits.splice(1,1,'🍙','🍜');
+fruits.splice(1, 1, '🍙', '🍜');
 console.log(fruits);
 
 // combine two arrays
-const fruits2 = ['🌶','🧄'];
+const fruits2 = ['🌶', '🧄'];
 const newFruits = fruits.concat(fruits2);
 console.log(newFruits);
 
@@ -85,3 +85,18 @@ fruits.push('🍅');
 console.log(fruits);
 console.log(fruits.indexOf('🍅'));
 console.log(fruits.lastIndexOf('🍅'));
+
+// sort
+
+const numbers = [1, 10, 4, 5, 18, 2, 9];
+console.log(numbers.sort());
+
+// 오름차순 a - b
+console.log(numbers.sort(function (a, b) {
+    return a - b;
+}));
+
+// 내림차순
+console.log(numbers.sort(function (a, b) {
+    return b - a;
+}));
