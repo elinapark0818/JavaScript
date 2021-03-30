@@ -102,7 +102,8 @@ console.log(numbers.sort(function (a, b) {
 }));
 
 // every
-
+// 빈 배열은 true
+// 하나라도 false 값이 있다면 false
 const isBelowThreshold = (currentValue) => currentValue < 40; // 40보다 작은지
 
 const array1 = [1, 30, 39, 29, 10, 13];
@@ -111,5 +112,36 @@ console.log(array1.every(isBelowThreshold));
 // expected output: true
 
 const array2 = [41, 1, 30, 38, 22, 13, 9]; // 하나라도 콜백함수에 부합하지 않는 요소가 있다면 false
-console.log(array2.every(isBelowThreshold));
-// expected output : false
+console.log(array2.every(isBelowThreshold)); // false
+
+// 모든 배열요소 크기 테스트
+function isBigEnough(element, index, array) {
+    return element >= 10;
+}
+[12, 5, 8, 130, 44].every(isBigEnough);   // false
+[12, 54, 18, 130, 44].every(isBigEnough); // true
+
+// 화살표 함수
+[12, 5, 8, 130, 44].every(elem => elem >= 10); // false
+[12, 54, 18, 130, 44].every(elem => elem >= 10); // true
+
+// some
+// 빈 배열은 false
+// 하나라도 true 값이 있다면 true
+const array = [1, 2, 3, 9, 5];
+
+// checks whether an element is even
+const even = (element) => element % 2 === 0;
+
+console.log(array.some(even)); // true
+
+// 배열 요소 테스트
+function isBiggerThan10(element, index, array) {
+    return element > 10;
+}
+[2, 5, 8, 1, 4].some(isBiggerThan10);  // false
+[12, 5, 8, 1, 4].some(isBiggerThan10); // true
+
+//화살표 함수
+[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
+[12, 5, 8, 1, 4].some(elem => elem > 10); // true
