@@ -96,7 +96,7 @@ console.log(numbers.sort(function (a, b) {
     return a - b;
 }));
 
-// 내림차순
+// 내림차순 b - a
 console.log(numbers.sort(function (a, b) {
     return b - a;
 }));
