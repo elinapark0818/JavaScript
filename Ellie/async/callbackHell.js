@@ -1,23 +1,24 @@
 'use strict';
-
+/*
 class DataStorage {
-    loginData (id, password, onSuccess, onError) {
-        setTimeout(()=> {
+    loginData(id, password, onSuccess, onError) {
+        setTimeout(() => {
             if (
                 (id === 'elina' && password === '1234') ||
                 (id === 'hoomin' && password === '1234')) {
-                    onSuccess(id);
+                onSuccess(id);
             } else {
-                    onError(new Error(' Wrong data'));
+                onError(new Error(' Wrong data'));
             }
         }, 2000);
     }
-    adminData (id, onSuccess, onError) {
-        setTimeout(()=> {
+
+    adminData(id, onSuccess, onError) {
+        setTimeout(() => {
             if (id === 'elina') {
-                onSuccess({id:'elina', admin:'admin'})
+                onSuccess({id: 'elina', admin: 'admin'})
             } else {
-                onError (new Error('Admin is not access'));
+                onError(new Error('Admin is not access'));
             }
         }, 1000);
     }
@@ -44,3 +45,19 @@ dataStorage.loginData(
         console.log(error);
     }
 )
+
+
+ */
+console.log('-----------------');
+
+function square(x, callback) {
+    setTimeout(callback, 1000, x * x);
+}
+
+square(2, function (x) {
+    square(x, function (x2) {
+        square(x2, function (x3) {
+            console.log(x3); // 256
+        });
+    });
+});
