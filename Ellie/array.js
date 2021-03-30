@@ -86,8 +86,7 @@ console.log(fruits);
 console.log(fruits.indexOf('🍅'));
 console.log(fruits.lastIndexOf('🍅'));
 
-// sort
-
+// sort 정렬하기
 const numbers = [1, 10, 4, 5, 18, 2, 9];
 console.log(numbers.sort());
 
@@ -199,3 +198,14 @@ console.log(sum2) //  12
 //     ,initialValue
 // );
 // console.log(sum3)
+
+//중복값 제거하기
+let arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+let result1 = arr.sort().reduce((accumulator, current) => {
+    const length = accumulator.length
+    if (length === 0 || accumulator[length - 1] !== current) {
+        accumulator.push(current);
+    }
+    return accumulator;
+}, []);
+console.log(result1); //[1,2,3,4,5]
