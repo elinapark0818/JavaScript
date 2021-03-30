@@ -209,3 +209,12 @@ let result1 = arr.sort().reduce((accumulator, current) => {
     return accumulator;
 }, []);
 console.log(result1); //[1,2,3,4,5]
+
+// reduceRight
+
+const array7 = ["1", "2", "3", "4", "5"];
+const left  = array7.reduce(function(prev, cur)      { return prev + cur; });
+const right = array7.reduceRight(function(prev, cur) { return prev + cur; });
+
+console.log(left);  // "12345"
+console.log(right); // "54321"
