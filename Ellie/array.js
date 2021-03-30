@@ -145,3 +145,25 @@ function isBiggerThan10(element, index, array) {
 //화살표 함수
 [2, 5, 8, 1, 4].some(elem => elem > 10);  // false
 [12, 5, 8, 1, 4].some(elem => elem > 10); // true
+
+// map
+const array4 = [1, 4, 9, 16];
+const map1 = array4.map(x => x * 2);
+console.log(map1); // expected output: Array [2, 8, 18, 32]
+
+// 인자를 받는 함수를 이용하여 숫자배열 재구성
+const nums = [1, 4, 9];
+const doubles = nums.map(function (num) {
+    return num * 2;
+});
+console.log(doubles);
+console.log(nums);
+
+// ASCII 인코딩 값을 요소로 갖는 배열
+const map = Array.prototype.map;
+const a = map.call('Hello World', function (x) {
+    return x.charCodeAt(0);
+});
+console.log(a);
+// a는 이제 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
+
