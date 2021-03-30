@@ -8,7 +8,7 @@ class DataStorage {
                 (id === 'hoomin' && password === '1234')) {
                     onSuccess(id);
             } else {
-                    onError(new Error('Id is not found'));
+                    onError(new Error(' Wrong data'));
             }
         }, 2000);
     }
@@ -24,8 +24,8 @@ class DataStorage {
 }
 
 const dataStorage = new DataStorage();
-const id = prompt('send your ID');
-const password = prompt('send your PW');
+const id = prompt('enter your ID');
+const password = prompt('enter your PW');
 dataStorage.loginData(
     id,
     password,
