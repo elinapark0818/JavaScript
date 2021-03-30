@@ -40,5 +40,19 @@ console.log(json);
 
 // 2. JSON to Object
 // parse(json)
+console.clear()
+json = JSON.stringify(rabbit);
 
+console.log(json);
 
+const obj = JSON.parse(json, (key, value) => {
+    console.log(`key: ${key}, value: ${value}`);
+    return key === 'birthDate' ? new Date(value) : value;
+});
+console.log(obj);
+rabbit.jump();
+// obj.jump(); // 없다! 제이슨으로 바꿀때는 함수가 포함되지 않기에
+
+console.log(rabbit.birthDate.getDate());
+console.log(obj.birthDate); // birthDate는 string 이다.
+console.log(obj.birthDate.getDate());
