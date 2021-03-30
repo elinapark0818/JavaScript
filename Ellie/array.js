@@ -167,3 +167,35 @@ const a = map.call('Hello World', function (x) {
 console.log(a);
 // a는 이제 [72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100]
 
+// filter
+// 주어진 함수의 테스트를 통과하는 요소를 모아서 새로운 배열로 반환하기
+const words = ['spray', 'limit', 'elite', 'hooming','elinapark'];
+const result = words.filter(word => word.length > 6);
+console.log(result); // ["hooming", "elinapark"]
+
+// reduce
+const sum = [0, 1, 2, 3].reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue;
+}, 0);
+console.log(sum); // 6
+
+// 화살표함수
+const total = [ 10, 11, 12, 13 ].reduce(
+    ( accumulator, currentValue ) => accumulator + currentValue,
+    0
+);
+console.log(total); // 46
+
+// Note! : 객체로 이루어진 배열에 들어 있는 값을 합산하기 위해서는 반드시 초기값을 지정해야한다
+const initialValue = 0;
+const sum2 = [{x: 3}, {x:4}, {x:5}].reduce(function (accumulator, currentValue) {
+    return accumulator + currentValue.x;
+},initialValue)
+console.log(sum2) //  12
+// 화살표함수로 바꾸면 깔끔
+// const initialValue = 0;
+// const sum3 = [{x: 3}, {x:4}, {x:5}].reduce(
+//     (accumulator, currentValue) => accumulator + currentValue.x
+//     ,initialValue
+// );
+// console.log(sum3)
