@@ -6,7 +6,8 @@
 function fetchUser() {
     return new Promise((resolve, reject) => {
         // do network request in 10 secs....
-        return 'elina';
+        resolve('elina');
+        reject('not found');
     })
 }
 const user = fetchUser();
