@@ -3,13 +3,11 @@
 // clear style of using promise :)
 
 // 1. async
-function fetchUser() {
-    return new Promise((resolve, reject) => {
+async function fetchUser() {
         // do network request in 10 secs....
-        resolve('elina');
-        reject('not found');
-    })
+        return 'elina'
 }
+
 const user = fetchUser();
 user.then(console.log);
 
