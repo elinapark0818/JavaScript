@@ -1,53 +1,43 @@
 'use strict';
-/*
-class DataStorage {
-    loginData(id, password, onSuccess, onError) {
-        setTimeout(() => {
-            if (
-                (id === 'elina' && password === '1234') ||
-                (id === 'hoomin' && password === '1234')) {
-                onSuccess(id);
-            } else {
-                onError(new Error(' Wrong data'));
-            }
-        }, 2000);
-    }
 
-    adminData(id, onSuccess, onError) {
-        setTimeout(() => {
-            if (id === 'elina') {
-                onSuccess({id: 'elina', admin: 'admin'})
-            } else {
-                onError(new Error('Admin is not access'));
-            }
-        }, 1000);
-    }
+class DataStorage {
+    loginData(id, password) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (
+                    (id === 'elina' && password === '1234') ||
+                    (id === 'hoomin' && password === '1234')) {
+                    resolve(id);
+                } else {
+                    reject(new Error(' Wrong data'));
+                }
+            }, 2000);
+            })}
+
+    adminData(id) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (id === 'elina') {
+                    resolve({id: 'elina', admin: 'admin'})
+                } else {
+                    reject(new Error('Admin is not access'));
+                }
+            }, 1000);
+        })}
 }
 
 const dataStorage = new DataStorage();
 const id = prompt('enter your ID');
 const password = prompt('enter your PW');
-dataStorage.loginData(
-    id,
-    password,
-    id => {
-        dataStorage.adminData(
-            id,
-            idWithAdmin => {
-                alert(`Hello ${idWithAdmin.id}, you have a ${idWithAdmin.admin} ACCESS`);
-            },
-            error => {
-                console.log(error);
-            }
-        );
-    },
-    error => {
-        console.log(error);
-    }
-)
+
+dataStorage.loginData(id,password)
+    .then(dataStorage.adminData)
+    .then(data => alert(`Welcome ${data.id}, Access To your admin ${data.admin}`))
+    .catch(console.log);
 
 
- */
+
+/*
 console.log('-----------------');
 
 function square(x, callback) {
@@ -61,3 +51,4 @@ square(2, function (x) {
         });
     });
 });
+*/
