@@ -19,15 +19,20 @@ function delay(ms) {
 }
 
 async function getApple() {
-    await delay(3000);
+    await delay(1000);
     return '🍎';
 }
 
 async function getBanana() {
-    await delay(3000);
+    await delay(1000);
     return '🍌';
 }
 
+async function pickFruits() {
+    const apple = await getApple();
+    const banana = await getBanana();
+    return `${apple} + ${banana}`;
+}
 // 이 또한 콜백지옥
 //function pickFruits() {
 //    return getApple()
