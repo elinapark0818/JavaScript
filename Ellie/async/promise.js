@@ -55,7 +55,7 @@ const cook = egg =>
         setTimeout(() => resolve(`${egg} => 🥠`), 1000);
     }));
 
-getHen()
-.then(hen => getEgg(hen))
-.then(egg => cook(egg))
-.then(meal => console.log(meal));
+getHen() // 하나씩만 받아올때는 생략이 가능하다
+.then(getEgg)
+.then(cook)
+.then(console.log);
