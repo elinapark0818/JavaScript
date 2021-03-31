@@ -33,7 +33,20 @@ const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your password');
 
-userStorage.loginUser(id,password)
-    .then(userStorage.getRoles)
-    .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
-    .catch(console.log);
+//userStorage.loginUser(id,password)
+//    .then(userStorage.getRoles)
+//    .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
+//    .catch(console.log);
+
+// 바꾸고 싶다...
+async function changeAsync() {
+    try {
+        const user = await userStorage.loginUser(id,password);
+        const userRole = await userStorage.getRoles(user);
+        console.log(`Hello ${userRole.name}, you have a ${userRole.role} role`)
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+changeAsync().then(console.log);
