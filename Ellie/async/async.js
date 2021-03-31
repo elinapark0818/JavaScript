@@ -19,7 +19,7 @@ function delay(ms) {
 }
 
 async function getApple() {
-    await delay(1000);
+    await delay(2000);
     return '🍎';
 }
 
@@ -53,3 +53,8 @@ function pickAllFruits() {
         .then(fruits => fruits.join(' + '));
 }
 pickAllFruits().then(console.log);
+
+function pickOnlyOne() {
+    return Promise.race([getApple(),getBanana()]);
+}
+pickOnlyOne().then(console.log);
