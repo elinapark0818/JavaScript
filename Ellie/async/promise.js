@@ -48,7 +48,7 @@ const getHen = () =>
     });
 const getEgg = hen =>
     new Promise((resolve, reject) => {
-        setTimeout(() => resolve(`${hen} => 🐣`), 1000);
+        setTimeout(() => reject(`error! => 🐣`), 1000);
     });
 const cook = egg =>
     new Promise(((resolve, reject) => {
@@ -57,5 +57,9 @@ const cook = egg =>
 
 getHen() // 하나씩만 받아올때는 생략이 가능하다
 .then(getEgg)
+    .catch(error => {
+        return '🐵';
+    })
 .then(cook)
-.then(console.log);
+.then(console.log)
+    .catch(console.log);
