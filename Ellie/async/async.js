@@ -20,7 +20,6 @@ function delay(ms) {
 
 async function getApple() {
     await delay(1000);
-    throw 'error';
     return '🍎';
 }
 
@@ -30,12 +29,10 @@ async function getBanana() {
 }
 
 async function pickFruits() {
-    try {
-        const apple = await getApple();
-        const banana = await getBanana();
-        } catch (error) {
-        console.log('throw error')
-        }
+    const applePromise = getApple();
+    const bananaPromise = getBanana();
+    const apple = await applePromise;
+    const banana = await bananaPromise;
     return `${apple} + ${banana}`;
 }
 
