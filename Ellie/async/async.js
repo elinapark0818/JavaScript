@@ -11,4 +11,6 @@ function fetchUser() {
     })
 }
 const user = fetchUser();
+user.then(console.log);
+
 console.log(user);
