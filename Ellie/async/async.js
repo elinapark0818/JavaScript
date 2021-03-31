@@ -46,3 +46,10 @@ async function pickFruits() {
 //}
 
 pickFruits().then(console.log);
+
+// 3. useful Promise APIs
+function pickAllFruits() {
+    return Promise.all([getApple(),getBanana()])
+        .then(fruits => fruits.join(' + '));
+}
+pickAllFruits().then(console.log);
