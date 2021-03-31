@@ -8,7 +8,33 @@ async function fetchUser() {
     return 'elina'
 }
 // async , 코드 블록이 자동으로 Promise로 바뀐다
+
 const user = fetchUser();
 user.then(console.log);
-
 console.log(user);
+
+// 2. await : ✨
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function getApple() {
+    await delay(3000);
+    return '🍎';
+}
+
+async function getBanana() {
+    await delay(3000);
+    return '🍌';
+}
+
+// 이 또한 콜백지옥
+//function pickFruits() {
+//    return getApple()
+//        .then(apple => {
+//            return getBanana()
+//                .then(banana => `${apple} + ${banana}`);
+//        });
+//}
+
+pickFruits().then(console.log);
