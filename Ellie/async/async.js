@@ -20,6 +20,7 @@ function delay(ms) {
 
 async function getApple() {
     await delay(1000);
+    throw 'error';
     return '🍎';
 }
 
@@ -29,10 +30,15 @@ async function getBanana() {
 }
 
 async function pickFruits() {
-    const apple = await getApple();
-    const banana = await getBanana();
+    try {
+        const apple = await getApple();
+        const banana = await getBanana();
+        } catch (error) {
+        console.log('throw error')
+        }
     return `${apple} + ${banana}`;
 }
+
 // 이 또한 콜백지옥
 //function pickFruits() {
 //    return getApple()
