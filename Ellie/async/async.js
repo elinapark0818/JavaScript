@@ -4,8 +4,10 @@
 
 // 1. async
 function fetchUser() {
-    //do network request in 10 secs...
-    return 'elina';
+    return new Promise((resolve, reject) => {
+        // do network request in 10 secs....
+        return 'elina';
+    })
 }
 const user = fetchUser();
 console.log(user);
