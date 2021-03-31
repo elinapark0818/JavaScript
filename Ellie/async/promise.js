@@ -54,3 +54,8 @@ const cook = egg =>
     new Promise(((resolve, reject) => {
         setTimeout(() => resolve(`${egg} => 🥠`), 1000);
     }));
+
+getHen()
+.then(hen => getEgg(hen))
+.then(egg => cook(egg))
+.then(meal => console.log(meal));
