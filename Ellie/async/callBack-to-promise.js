@@ -43,10 +43,15 @@ async function changeAsync() {
     try {
         const user = await userStorage.loginUser(id,password);
         const userRole = await userStorage.getRoles(user);
-        console.log(`Hello ${userRole.name}, you have a ${userRole.role} role`)
+        return `Hello ${userRole.name}, you have a ${userRole.role} role`;
+        // console.log()
     } catch (error) {
-        console.log(error);
+        return error;
+        // console.log(error);
     }
 }
 
-changeAsync().then(console.log);
+changeAsync().then(string => console.log(string));
+//같은거다 changeAsync().then(console.log);
+
+// changeAsync().then();
