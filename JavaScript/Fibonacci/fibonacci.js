@@ -5,6 +5,7 @@
 // F1 = 1;
 // Fn+2 = Fn+1 + Fn
 // F(n) = F(n-1) + F(n-2)
+// F(1) = F(2) = 1
 
 function elinaFibonacci(num) {
     let previous = 0;
@@ -17,7 +18,8 @@ function elinaFibonacci(num) {
     }
     return last;
 }
-console.log(elinaFibonacci(13));
+
+console.log(elinaFibonacci(33) + history);
 
 
 // 다른사람
@@ -25,18 +27,32 @@ function fibonacci(number) {
     if (number < 2) return number;
     return fibonacci(number - 1) + fibonacci(number - 2);
 }
-console.log(fibonacci(8))
+
+console.log(fibonacci(13) + history);
 
 
 // 또 다른 사람
 function otherFibonacci(num) {
     let answer = 0;
-    if( num <= 1 ) {
+    if (num <= 1) {
         return num;
-    }
-    else if( num > 1 ) {
-        answer = fibonacci(num-1) + fibonacci(num-2);
+    } else if (num > 1) {
+        answer = fibonacci(num - 1) + fibonacci(num - 2);
     }
     return answer;
 }
-console.log(otherFibonacci(3));
+
+console.log(otherFibonacci(10) + history);
+
+
+// 또또 다른 사람
+let a, b, result;
+a = 0;
+b = 1;
+for (let i = 1; i < 100; i++) {
+    console.log(result+" ");
+    result = a + b;
+    a = b;
+    b = result;
+}
+console.log(result);
