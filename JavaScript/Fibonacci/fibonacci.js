@@ -50,9 +50,30 @@ let a, b, result;
 a = 0;
 b = 1;
 for (let i = 1; i < 100; i++) {
-    console.log(result+" ");
+    console.log(result + " ");
     result = a + b;
     a = b;
     b = result;
 }
 console.log(result);
+
+// 또또또 다른 사람
+function aFibonacci(n) {
+    if (n <= 2) {
+        return 1;  //2번째 까지의 값은 1이므로 1을 리턴
+    }
+    let i = 1
+    let num1 = 0;
+    let num2 = 1;
+    let result;
+
+    while (i < n) {  //숫자 n이 될때까지 반복
+        result = num1 + num2;
+        num1 = num2;
+        num2 = result;
+        i++;
+    }
+    return result;
+}
+
+console.log(aFibonacci(13));
