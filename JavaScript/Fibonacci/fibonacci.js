@@ -75,5 +75,28 @@ function aFibonacci(n) {
     }
     return result;
 }
-
 console.log(aFibonacci(13));
+
+// 피보나치 나열
+function bfibonacci(n) {
+
+    if (n <= 2) {
+        return 1;
+    }
+
+    let i = 1
+    let num1 = 0;
+    let num2 = 1;
+    let result = [];  //결과값을 담을 빈 배열을 선언하고
+
+    while (i < n) {
+        let sum = num1 + num2;
+        result.push(sum)  //값이 나올때마다 배열에 푸시
+        num1 = num2;
+        num2 = sum;
+        i++;
+    }
+    return result.join(', ');
+}
+
+console.log(bfibonacci(13)); //피보나치 n번째 값까지 나열하기
