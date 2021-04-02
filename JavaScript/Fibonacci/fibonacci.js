@@ -6,6 +6,15 @@
 // Fn+2 = Fn+1 + Fn
 // F(n) = F(n-1) + F(n-2)
 // F(1) = F(2) = 1
+main();
+
+function main() {
+    console.time("calculatingTime")
+    // console.log(elinaFibonacci(50));
+    //console.log(fibonacci(20));
+    console.log(f(20));
+    console.timeEnd('calculatingTime');
+}
 
 function elinaFibonacci(num) {
     let previous = 0;
@@ -18,17 +27,58 @@ function elinaFibonacci(num) {
     }
     return last;
 }
+function f(number) {
+    let memo = [0,1];
+    function recursive(number) {
+        console.log(number);
+        // if (number <= 2) {
+        //     return 0;
+        // }
+        // let i = 1;
+        // let pre = 0;
+        // let crr = 1;
+        // let result = [];
+        //
+        // if (i < n) {
+        //     let fb = pre + crr;
+        //     result.push(fb);
+        //     pre = crr;
+        //     crr = result;
+        //     i++
+        // }
+        // return result
+        if (number === 0) {
+            return 0;
+        }
+        if (!memo[number]) {
+            let newVar = recursive(number - 1) + recursive(number - 2);
+            memo[number] = newVar;
+            return newVar;
+        }
+        return memo[number];
+    }
 
-console.log(elinaFibonacci(33) + history);
+}
+
+
+
+/*
+
+let test = [0,1];
+if (!test[2]) {
+    console.log("여기");
+} else {
+    console.log("여기2");
+}
+*/
 
 
 // 다른사람
 function fibonacci(number) {
+    console.log(number)
     if (number < 2) return number;
     return fibonacci(number - 1) + fibonacci(number - 2);
 }
-
-console.log(fibonacci(13) + history);
 
 
 // 또 다른 사람
@@ -42,20 +92,22 @@ function otherFibonacci(num) {
     return answer;
 }
 
-console.log(otherFibonacci(10) + history);
+//console.log(otherFibonacci(10) + history);
 
 
 // 또또 다른 사람
-let a, b, result;
-a = 0;
-b = 1;
-for (let i = 1; i < 100; i++) {
-    console.log(result + " ");
-    result = a + b;
-    a = b;
-    b = result;
+function aaFibonacci() {
+    let a, b, result;
+    a = 0;
+    b = 1;
+    for (let i = 1; i < 100; i++) {
+        console.log(result + " ");
+        result = a + b;
+        a = b;
+        b = result;
 }
-console.log(result);
+}
+//console.log(result);
 
 // 또또또 다른 사람
 function aFibonacci(n) {
@@ -75,7 +127,7 @@ function aFibonacci(n) {
     }
     return result;
 }
-console.log(aFibonacci(13));
+//console.log(aFibonacci(13));
 
 // 피보나치 나열
 function bfibonacci(n) {
@@ -99,4 +151,4 @@ function bfibonacci(n) {
     return result.join(', ');
 }
 
-console.log(bfibonacci(13)); //피보나치 n번째 값까지 나열하기
+//console.log(bfibonacci(13)); //피보나치 n번째 값까지 나열하기
