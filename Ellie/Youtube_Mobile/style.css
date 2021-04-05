@@ -94,4 +94,8 @@ header .icons .fa-search {
 
 .info .metadata .titleAndButton .title {
     font-size: var(--font-medium);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
