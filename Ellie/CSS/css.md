@@ -19,3 +19,9 @@
 - Attribute
   - " [] "
     
+
+##Note
+- padding : contents 안 사이즈
+- margin : contents 밖 사이즈
+
+https://flukeout.github.io
