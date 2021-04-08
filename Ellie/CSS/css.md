@@ -25,3 +25,7 @@
 - margin : contents 밖 사이즈
 
 https://flukeout.github.io
+
+##display
+
+##position
