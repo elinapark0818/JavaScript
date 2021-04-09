@@ -27,7 +27,8 @@
 https://flukeout.github.io
 
 ##display
-
+- inline
+- block
 ##position
 - static : 기본값
 - relative : 원래 있어야하는 자리에서 지정한 값만큼 이동
