@@ -34,3 +34,5 @@ https://flukeout.github.io
 - absolute : 가까이에 있는 상자에서 지정한 값만큼 이동
 - fixed  : 상자에서 벗어나서 페이지 상에서 지정한 값만큼 이동
 - sticky : 스크롤링 하면 상단에 고정된다
+
+Can I use
