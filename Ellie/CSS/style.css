@@ -67,6 +67,7 @@ body, html {
     flex-direction: column-reverse;
     flex-wrap: wrap-reverse;
     /*flex-flow: column-reverse wrap-reverse;*/
+    justify-content: space-around;
 }
 
 .item {
