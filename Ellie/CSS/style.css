@@ -66,11 +66,13 @@ body, html {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap-reverse;
+    /*flex-flow: column-reverse wrap-reverse;*/
 }
 
 .item {
     width: 40px;
     height: 40px;
+    border: 1px dashed orange;
 }
 
 .item1 {
