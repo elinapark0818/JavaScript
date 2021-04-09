@@ -64,10 +64,12 @@ body, html {
     background: beige;
     height: 100vh;
     display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
     /*flex-flow: column-reverse wrap-reverse;*/
-    justify-content: space-around;
+    justify-content: space-between; /*main axis에서 item 정렬*/
+    align-items: baseline;
+    align-content: center;
 }
 
 .item {
