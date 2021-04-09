@@ -37,3 +37,22 @@ https://flukeout.github.io
 - sticky : 스크롤링 하면 상단에 고정된다
 
 Can I use
+
+##FlexBox
+
+- container
+  - display
+  - flex-direction
+  - flex-wrap
+  - flex-flow
+  - justify-content
+  - align-items
+  - align-content
+- item
+  - order
+  - flex-grow
+  - flex-shrink
+  - flex
+  - align-self
+  
+main axis / cross axis
