@@ -55,5 +55,5 @@ div {
     background: blue;
     left: 20px;
     top: 20px;
-    position: fixed;
+    position: sticky;
 }
