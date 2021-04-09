@@ -69,7 +69,7 @@ body, html {
     /*flex-flow: column-reverse wrap-reverse;*/
     justify-content: space-between; /*main axis에서 item 정렬*/
     align-items: baseline;
-    align-content: center;
+    align-content: center; /*cross axis에서 item 정렬?*/
 }
 
 .item {
