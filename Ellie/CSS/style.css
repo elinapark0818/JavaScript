@@ -2,40 +2,40 @@
     property: value;
 } */
 
-* {
-    color: green;
-}
+/** {*/
+/*    color: green;*/
+/*}*/
 
-li {
-    color: blue;
-}
+/*li {*/
+/*    color: blue;*/
+/*}*/
 
-li#special {
-    color: deeppink;
-    font-weight: bold;
-}
+/*li#special {*/
+/*    color: deeppink;*/
+/*    font-weight: bold;*/
+/*}*/
 
-.red {
-    width: 100px;
-    height: 100px;
-    padding: 20px 100px 20px;
-    margin: 20px 20px 100px;
-    border: 2px dashed red;
-    background-color: yellow;
-}
+/*.red {*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    padding: 20px 100px 20px;*/
+/*    margin: 20px 20px 100px;*/
+/*    border: 2px dashed red;*/
+/*    background-color: yellow;*/
+/*}*/
 
-button:hover {
-    color: red;
-    background-color: beige;
-}
+/*button:hover {*/
+/*    color: red;*/
+/*    background-color: beige;*/
+/*}*/
 
-a[href^="http"] {
-    color: purple;
-}
+/*a[href^="http"] {*/
+/*    color: purple;*/
+/*}*/
 
-a[href$=".com"] {
-    color: chartreuse;
-}
+/*a[href$=".com"] {*/
+/*    color: chartreuse;*/
+/*}*/
 
 /*div {*/
 /*    width: 50px;*/
@@ -57,54 +57,78 @@ a[href$=".com"] {
 /*    top: 20px;*/
 /*    position: sticky;*/
 /*}*/
-body, html {
-    height: 100%;
-}
+
+/*.container {*/
+/*    background: beige;*/
+/*    height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: wrap;*/
+/*    !*flex-flow: column-reverse wrap-reverse;*!*/
+/*    justify-content: space-between; !*main axis에서 item 정렬*!*/
+/*    align-items: baseline;*/
+/*    align-content: center; !*cross axis에서 item 정렬?*!*/
+/*}*/
+
+/*.item {*/
+/*    width: 40px;*/
+/*    height: 40px;*/
+/*    border: 1px dashed orange;*/
+/*}*/
+
+/*.item1 {*/
+/*    background: #ef9a9a;*/
+/*}*/
+/*.item2 {*/
+/*    background: #f48fb1;*/
+/*}*/
+/*.item3 {*/
+/*    background: #ce93d8;*/
+/*}*/
+/*.item4 {*/
+/*    background: #b39ddb;*/
+/*}*/
+/*.item5 {*/
+/*    background: #90caf9;*/
+/*}*/
+/*.item6 {*/
+/*    background: #a5d6a7;*/
+/*}*/
+/*.item7 {*/
+/*    background: #e6ee9c;*/
+/*}*/
+/*.item8 {*/
+/*    background: #fff59d;*/
+/*}*/
+/*.item9 {*/
+/*    background: #ffcc80;*/
+/*}*/
+/*.item10 {*/
+/*    background: #ffab91;*/
+/*}*/
+
 .container {
+    padding-top: 100px;
     background: beige;
     height: 100vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /*flex-flow: column-reverse wrap-reverse;*/
-    justify-content: space-between; /*main axis에서 item 정렬*/
-    align-items: baseline;
-    align-content: center; /*cross axis에서 item 정렬?*/
 }
 
 .item {
     width: 40px;
     height: 40px;
-    border: 1px dashed orange;
+    border: 1px solid black;
 }
 
 .item1 {
     background: #ef9a9a;
+    order: 2;
 }
 .item2 {
-    background: #f48fb1;
+    background: #ce93d8;
+    order: 3;
 }
 .item3 {
-    background: #ce93d8;
-}
-.item4 {
-    background: #b39ddb;
-}
-.item5 {
     background: #90caf9;
-}
-.item6 {
-    background: #a5d6a7;
-}
-.item7 {
-    background: #e6ee9c;
-}
-.item8 {
-    background: #fff59d;
-}
-.item9 {
-    background: #ffcc80;
-}
-.item10 {
-    background: #ffab91;
+    order: 1;
 }

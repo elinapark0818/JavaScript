@@ -55,4 +55,7 @@ Can I use
   - flex
   - align-self
   
-main axis / cross axis
+- main axis
+- cross axis
+
+CSS TRICKS 사이트
