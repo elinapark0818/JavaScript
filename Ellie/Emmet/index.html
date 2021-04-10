@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- > -->
+div>ul>li
+<div>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+<!-- + -->
+div>ul+ol
+<div>
+    <ul></ul>
+    <ol></ol>
+</div>
+
+<!-- * -->
+ul>li*5
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!-- ^ -->
+div>ul>li^ol
+<div>
+    <ul>
+        <li></li>
+    </ul>
+    <ol></ol>
+</div>
+
+<!-- () -->
+div>(header>ul>li*2>a)+footer>p
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</div>
+
+<!-- {} -->
+p{hello}
+<p>hello</p>
+
+<!-- {$} -->
+p.class${item$}*5
+<p class="class1">item1</p>
+<p class="class2">item2</p>
+<p class="class3">item3</p>
+<p class="class4">item4</p>
+<p class="class5">item5</p>
+
+<!-- lorem -->
+p>lorem
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sed, veritatis. Atque autem delectus
+    exercitationem expedita nobis perspiciatis quis. Atque beatae, commodi eaque esse illo ipsa labore nesciunt officiis
+    suscipit.</p>
+p>lorem4
+<p>Lorem ipsum dolor sit.</p>
+
+section>div>li*2
+<section>
+    <div>
+        <li></li>
+        <li></li>
+    </div>
+</section>
+
+</body>
+</html>
